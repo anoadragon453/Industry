@@ -1,0 +1,244 @@
+Edict ideas:
+
+-Ley de vagos y maleantes.
+Todos los mendigos dejan de recibir limosnas y solo recibirán programas sociales (si los hay). No pueden manifestarse ni opinar, así que su satisfacción política será siempre 0.
+
+-Prohibir las bolsas de plástico.
+La producción y consumo de productos químicos se reducirá en un 25%.
+
+-Ley marcial.
+La policía y ejército matan directamente a cualquier delincuente que vean, así que la tendencia a delinquir cae a la mitad y no tienes que mantener a ningún delincuente. No puedes reformar obreros enemigos y la felicidad baja.
+
+-Legalización del aborto.
+Todos los fetos con enfermedades mentales o deformaciones son sacrificados sistemáticamente.
+
+-Adopción libre.
+Todas las parejas homosexuales con acceso a una oficina pueden adoptar bebés de otras parejas. Las parejas adoptarán con la misma frecuencia que otras parejas tienen hijos.
+
+-Ilegalizar las manifesctaciones.
+Declara como criminales a los que participen en manifestaciones. La gente se manifiesta menos pero puedes detener o matar a los manifestados.
+
+-Educación básica obligatoria.
+Todos los que no la tengan reciben una educación básica si pueden.
+
+-Servicio militar obligatorio.
+
+-Multas por contaminación.
+Las empresas privadas pagan dinero al estado en proporción a cuánto contaminen y al espacio que ocupen. Éstas podrían cambiar su directriz o cerrar al ser menos rentables.
+
+-Ayudas sociales (a parados, a trabajadores, a jubilados, a estudiantes, a enfermos, a padres...)
+
+-Control de la natalidad
+
+
+
+Barriles metálicos con tuberías complejas saliendo de ellos
+Barriles con herramientas y armas dentro
+
+Tetraristos usados para la señalización (son 4 palos naranjas con anillos fosforescentes (como un cono de señalización) en disposición tetraédrica para que uno de los palos esté perpendicular al suelo siempre)
+
+LEFER yogur brand
+
+Rainbowberry brand
+
+
+
+Settlers
+Citizens that have been paid to settle someplace. When told to settle, the unit becomes a crossroad with:
+	a tenement (inhabited by the citizens that formed the unit)
+	a office (paperworks, operated by the educated citizens that formed the unit if any)
+	a workshop
+	a farm
+
+
+
+-modos de juego
+	masacre
+	colonización
+
+
+
+En un edificio comercial entre diferentes sitios hay una serie de ofertas comerciales.
+Cada comerciante puede mantener un determinado volumen comercial. Hay ofertas más densas, que requieren el trabajo de más comerciantes, y menos.
+Las ofertas de comercio van variando.
+-Cuantas más ofertas de un tipo mantengas, aparecerán más del otro (compra/venta).
+-Cuanto más aumente la densidad de un tipo de comercio de un recurso (sea recursos generales, arena, basura, agua o cualquier otro) menos favorables serán los tratos.
+-Los precios internacionales pueden variar (y lo harán continuamente) y el precio de las ofertas variará cuasiproporcionalmente. Si la varación es muy grande y significativa (+-10% por unidad) se te ofrecerá la opción de interrumpir la oferta si es una variación desfavorable. Recíprocamente, la oferta tiene un 20% de probabilidades de ser interrumpida si te favorece mucho.
+-Un jugador humano en modo multijugador puede hacer ofertas mediante proposiciones de oferta y acuerdo de otro jugador.
+-Se puede prohibir la importación o exportación de ciertos bienes por parte de ciudadanos privados.
+
+
+
+Options: GPU render and CPU render
+
+
+
+Rivers can't flow straight. They have to keep making curves.
+
+
+
+Water pressure could indicate how far a water supply can supply.
+
+
+
+Nativos
+Habitan sus propios poblados, pequeños núcleos de población consistentes en un campo de trabajo con granjas y chabolas alrededor.
+Se puede comerciar con ellos, intercambiando recursos. Normalmente ofrecen minerales, plantas y animales.
+Pueden incorporarse a la civilización, buscar trabajo en tu ciudad, irse a vivr allí...
+Su crecimiento poblacional está limitado, y unos pocos de sus habitantes tienen formación avanzada.
+
+
+
+Evolución de un edificio:
+Torre de telégrafo > Torre de teléfono > Torre de telecomunicaciones
+
+
+
+Nurseries
+Children normally need at least one adult to stay over at home and care of them, forcing parents to have one of them not working, and forcing single families to be jobless.
+Nurseries take care of children when their parents aren't present, allowing both parents or single parents to work, and orphans to survive.
+
+
+
+-nurse
+
+
+
+Drugs (medicines) can be sold massively as any other good by default. Their commerce can also be controlled.
+Law: Drug control
+
+
+
+Indigencia
+
+
+
+Información
+Producida en laboratorios, universidades, medios de comunicación, oficinas, edificios del gobierno, bares, estaciones de autobús, foros. La cantidad de información almacenada afecta a la educación e investigación.
+
+
+
+//Una unidad equivale a 1/18 m^3 ó 1 fanega?
+
+
+
+1 fanega (10*10 tiles): enough to maintain one cow
+
+A tile (8*8 m2) yields on average 8 kg of a crop.
+
+
+
+fracking: turns water deposits into oil?
+
+
+
+Airlifts?
+Teleféricos?
+They can transport over buildings and mountains. They use electrical power (electrically powered wires).
+
+Trains should be able to have electrically powered wires over rails as technology progresses.
+
+
+
+canal:
+permite a barcos entrar en él
+
+
+
+banana shaped blimps
+
+
+
+Plants not growing in their optimal climate can take longer to grow, require more water (if climate is drier), more fertilizers (if climate is wetter or colder) and produce less. Harsh winters affect plants that are weak to coldness specially, and draughts can affect specially plants that are adapted to humid climates.
+An ore can have between 1000 and 20000 metal units.
+An unit can be an equivalent to 1/25 cubic meter.
+
+Las plantas fuera de su clima óptimo pueden tardar más en crecer (si el clima es demasiado seco), requerir más fertilizantes (si es demasiado húmedo o frío) y producir menos. Los inviernos duros afectan especialmente a plantas poco resistentes al frío, y las sequías afectan especialmente a plantas autóctonas de climas húmedos.
+Una mena puede tener entre 1000 y 20000 unidades de metal.
+Una unidad puede equivaler a 1/25 de metro cúbico.
+
+
+
+Having agricultural vehicles increases reach and production of farms.
+
+
+
+Selling stocks of a company gives you money, but it will deny you access to the company's resources and services and you'll have to pay for them, and the benefits will the divided afterwards.
+Profits will be divided between anyone working as an investor.
+
+
+
+Warnings:
+"The population is larger than what the predicted harvest can feed!"
+"¡La población es demasiado grande para lo que la cosecha proyectada puede alimentar!"
+
+"There are starving citizens!"
+
+
+
+A system that generates a two dimensional image of the city by the side, to have an image of the city for the save game file.
+
+
+
+A sight of the map becomes available after the first politechnic college is built.
+
+
+
+el precio al que se vende un producto privado depende de la variedad de empresas vendiéndolo que hay en el mercado
+
+
+
+-embassy
+-an ambassador being harmed or killed harms relations
+
+
+
+-can build water mills on water jumps (varying water level between tiles)
+
+
+
+resource properties
+type -> luxury
+boolean -> storeable (if false, it's strictly a "flow" resource)
+
+
+
+border police: police that watches over a line and catches whoever steps in that line of tiles
+
+
+
+type: triggertype{
+	function
+}
+type: trigger{
+	private id
+	private mode
+	getid{
+		if(mode = specific)
+			return id
+		if(mode = beartrap)
+			return unit who stepped in this
+	}
+}
+is placed on a tile, triggers a function (corresponding triggertype) when a unit steps on it, over a certain id or mode
+
+
+
+plot economy:
+gdp'(t)  gdp''(t)
++        +        green (economy is growing, growth is accelerating)
++        -        light green (economy is growing, growth is stalling)
+-        +        yellow (economy is shrinking, shrinkage is stalling)
+-        -        red (economy is shrinking, shrinkage is accelerating)
+
+plot population:
+gdp'(t)  gdp''(t)
++        +        blue (population is growing, growth is accelerating)
++        -        baby blue (population is growing, growth is stalling)
+-        +        light green (population is shrinking, shrinkage is stalling)
+-        -        green (population is shrinking, shrinkage is accelerating)
+
+
+
+map generation
+-underground water supplies form somewhere with a lot of sediments
