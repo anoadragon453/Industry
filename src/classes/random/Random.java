@@ -4,12 +4,6 @@ public interface Random {
 	
 	// sequence
 	
-	public interface CharacterSequence {
-		
-		public char next();
-		
-	}
-	
 	public interface IntegerSequence {
 		
 		public int next();
