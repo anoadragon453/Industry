@@ -2,13 +2,21 @@ package classes.random;
 
 public interface Random {
 	
-	// 1 dimensional
+	// sequence
 	
-	public interface Strip<T> {
+	public interface CharacterSequence {
 		
-		public T at(int x);
+		public char next();
 		
 	}
+	
+	public interface IntegerSequence {
+		
+		public int next();
+		
+	}
+	
+	// 1 dimensional
 	
 	public interface IntegerStrip {
 		
@@ -18,12 +26,6 @@ public interface Random {
 	
 	// 2 dimensional
 	
-	public interface Grid<T> {
-		
-		public T at(int x, int y);
-		
-	}
-	
 	public interface IntegerGrid {
 		
 		public int at(int x, int y);
@@ -31,12 +33,6 @@ public interface Random {
 	}
 	
 	// 3 dimensional
-	
-	public interface LayeredGrid<T> {
-		
-		public T at(int x, int y, int z);
-		
-	}
 	
 	public interface IntegerLayeredGrid {
 		
