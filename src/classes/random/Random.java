@@ -2,16 +2,6 @@ package classes.random;
 
 public interface Random {
 	
-	// sequence
-	
-	public interface Sequence {
-		
-		public int getNextFrom(int x);
-		
-		public int getPreviousFrom(int x);
-		
-	}
-	
 	// 1 dimensional
 	
 	public interface Strip<T> {
@@ -20,51 +10,9 @@ public interface Random {
 		
 	}
 	
-	public interface ByteStrip {
-		
-		public byte at(int x);
-		
-	}
-	
-	public interface ShortStrip {
-		
-		public short at(int x);
-		
-	}
-	
-	public interface IntStrip {
+	public interface IntegerStrip {
 		
 		public int at(int x);
-		
-	}
-	
-	public interface LongStrip {
-		
-		public long at(int x);
-		
-	}
-	
-	public interface BooleanStrip {
-		
-		public boolean at(int x);
-		
-	}
-	
-	public interface CharStrip {
-		
-		public char at(int x);
-		
-	}
-	
-	public interface FloatStrip {
-		
-		public float at(int x);
-		
-	}
-	
-	public interface DoubleStrip {
-		
-		public double at(int x);
 		
 	}
 	
@@ -76,51 +24,9 @@ public interface Random {
 		
 	}
 	
-	public interface ByteGrid {
-		
-		public byte at(int x, int y);
-		
-	}
-	
-	public interface ShortGrid {
-		
-		public short at(int x, int y);
-		
-	}
-	
-	public interface IntGrid {
+	public interface IntegerGrid {
 		
 		public int at(int x, int y);
-		
-	}
-	
-	public interface LongGrid {
-		
-		public long at(int x, int y);
-		
-	}
-	
-	public interface BooleanGrid {
-		
-		public boolean at(int x, int y);
-		
-	}
-	
-	public interface CharGrid {
-		
-		public char at(int x, int y);
-		
-	}
-	
-	public interface FloatGrid {
-		
-		public float at(int x, int y);
-		
-	}
-	
-	public interface DoubleGrid {
-		
-		public double at(int x, int y);
 		
 	}
 	
@@ -132,51 +38,9 @@ public interface Random {
 		
 	}
 	
-	public interface ByteLayeredGrid {
-		
-		public byte at(int x, int y, int z);
-		
-	}
-	
-	public interface ShortLayeredGrid {
-		
-		public short at(int x, int y, int z);
-		
-	}
-	
-	public interface IntLayeredGrid {
+	public interface IntegerLayeredGrid {
 		
 		public int at(int x, int y, int z);
-		
-	}
-	
-	public interface LongLayeredGrid {
-		
-		public long at(int x, int y, int z);
-		
-	}
-	
-	public interface BooleanLayeredGrid {
-		
-		public boolean at(int x, int y, int z);
-		
-	}
-	
-	public interface CharLayeredGrid {
-		
-		public char at(int x, int y, int z);
-		
-	}
-	
-	public interface FloatLayeredGrid {
-		
-		public float at(int x, int y, int z);
-		
-	}
-	
-	public interface DoubleLayeredGrid {
-		
-		public double at(int x, int y, int z);
 		
 	}
 	
