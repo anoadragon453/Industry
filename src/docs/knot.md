@@ -1,21 +1,24 @@
 The reach of a knot is indicated by the basic property knotreach. A knotreach of 0 means that a knot can only be connected to itself.
 
 ```
-`[ ][ ][ ]`
-`[ ][k][ ]`
-`[ ][ ][ ]`
+[ ][ ][ ]
+[ ][k][ ]
+[ ][ ][ ]
 ```
 
 A knotreach of 1 means it can be connected to all tiles within 1 tile.
 
+```
 [ ][ ][ ][ ][ ]
 [ ][c][c][c][ ]
 [ ][c][k][c][ ]
 [ ][c][c][c][ ]
 [ ][ ][ ][ ][ ]
+```
 
 However, a knotreach of two would allow a knot to be connected to these tiles.
 
+```
 [ ][ ][ ][ ][ ][ ][ ]
 [ ][ ][c][c][c][ ][ ]
 [ ][c][c][c][c][c][ ]
@@ -23,9 +26,11 @@ However, a knotreach of two would allow a knot to be connected to these tiles.
 [ ][c][c][c][c][c][ ]
 [ ][ ][c][c][c][ ][ ]
 [ ][ ][ ][ ][ ][ ][ ]
+```
 
 And this is the case for a knotreach of three.
 
+```
 [ ][ ][ ][ ][ ][ ][ ][ ][ ]
 [ ][ ][ ][c][c][c][ ][ ][ ]
 [ ][ ][ ][c][c][c][ ][ ][ ]
@@ -35,9 +40,11 @@ And this is the case for a knotreach of three.
 [ ][ ][ ][c][c][c][ ][ ][ ]
 [ ][ ][ ][c][c][c][ ][ ][ ]
 [ ][ ][ ][ ][ ][ ][ ][ ][ ]
+```
 
 And four.
 
+```
 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 [ ][ ][ ][ ][c][c][c][ ][ ][ ][ ]
 [ ][ ][ ][ ][c][c][c][ ][ ][ ][ ]
@@ -49,11 +56,13 @@ And four.
 [ ][ ][ ][ ][c][c][c][ ][ ][ ][ ]
 [ ][ ][ ][ ][c][c][c][ ][ ][ ][ ]
 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+```
 
 The reason behind this is the way connections occupy tiles or tiles are checked for the presence of a connection on them. Tiles don't hold any data as to what connections go through them. Whether a tile is occupied by a connection is tested by checking for the presence of knots in any of the tiles within knotreach in positive and negative direction of both axis and checking the knots any found knot is connected to.
 
 This shows the example with a knotreach of 6.
 
+```
 t : tile being tested
 c : tile that must be checked for the presence of a knot
 
@@ -72,9 +81,11 @@ c : tile that must be checked for the presence of a knot
 [ ][ ][ ][ ][ ][ ][ ][c][ ][ ][ ][ ][ ][ ][ ]
 [ ][ ][ ][ ][ ][ ][ ][c][ ][ ][ ][ ][ ][ ][ ]
 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+```
 
 A connection takes over tiles like this:
 
+```
 k : knot connected to the other knot
 c : tiles occupied by a connection between knots
 
@@ -91,17 +102,21 @@ c : tiles occupied by a connection between knots
 [ ][k][c][c][c][c][c][c][ ]
 [ ][c][c][c][c][c][c][k][ ]
 [ ][ ][ ][ ][ ][ ][ ][ ][ ]
+```
 
 As stated, these can't be connected.
 
+```
 [ ][ ][ ][ ][ ][ ][ ][ ][ ]
 [ ][k][ ][ ][ ][ ][ ][ ][ ]
 [ ][ ][ ][ ][ ][ ][ ][ ][ ]
 [ ][ ][ ][ ][ ][ ][ ][k][ ]
 [ ][ ][ ][ ][ ][ ][ ][ ][ ]
+```
 
 It's costly to check for the presence of knots as this forces you to check for all nearby tiles rather than just the ones in a cross.
 
+```
 c : tiles from where the knot can be found if checking along the two axis
 ! : tiles that would theoretically be occupied by the connection but have no nearby knots following the axis
 
@@ -110,12 +125,14 @@ c : tiles from where the knot can be found if checking along the two axis
 [ ][c][!][!][!][!][!][c][ ]
 [c][c][c][c][c][c][c][k][c]
 [ ][c][ ][ ][ ][ ][ ][c][ ]
+```
 
 Not to mention such a diagonal connection would either take up a lot of tiles or make it more complex to check whether a connection occupies a tile.
 
-occupies all tiles with k < tile < k',
-checking whether a tile is occupied is a O(^2) operation
-graphics more complex to compose
+```
+* occupies all tiles with k < tile < k',
+* checking whether a tile is occupied is a O(^2) operation
+* graphics more complex to compose
 
 [ ][ ][ ][ ][ ][ ][ ][ ][ ]
 [ ][k][c][c][c][c][c][c][ ]
@@ -126,11 +143,13 @@ graphics more complex to compose
 [ ][c][c][c][c][c][c][c][ ]
 [ ][c][c][c][c][c][c][k][ ]
 [ ][ ][ ][ ][ ][ ][ ][ ][ ]
+```
 
-occupies all tiles with similar proportion between connections, ceiled and floored
-checking whether a tile is occupied is a O(^2) operation
-graphics more complex to compose
+*occupies all tiles with similar proportion between connections, ceiled and floored
+*checking whether a tile is occupied is a O(^2) operation
+*graphics more complex to compose
 
+```
 [ ][ ][ ][ ][ ][ ][ ][ ][ ]
 [ ][k][c][ ][ ][ ][ ][ ][ ]
 [ ][c][c][c][ ][ ][ ][ ][ ]
@@ -140,6 +159,7 @@ graphics more complex to compose
 [ ][ ][ ][ ][ ][c][c][c][ ]
 [ ][ ][ ][ ][ ][ ][c][k][ ]
 [ ][ ][ ][ ][ ][ ][ ][ ][ ]
+```
 
 In the end, these are the tiles where a second knot can be for a first knot to connect to it, still assuming a knotreach of 6:
 
