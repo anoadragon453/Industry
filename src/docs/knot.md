@@ -145,11 +145,11 @@ Not to mention such a diagonal connection would either take up a lot of tiles or
 [ ][ ][ ][ ][ ][ ][ ][ ][ ]
 ```
 
+```
 *occupies all tiles with similar proportion between connections, ceiled and floored
 *checking whether a tile is occupied is a O(^2) operation
 *graphics more complex to compose
 
-```
 [ ][ ][ ][ ][ ][ ][ ][ ][ ]
 [ ][k][c][ ][ ][ ][ ][ ][ ]
 [ ][c][c][c][ ][ ][ ][ ][ ]
@@ -163,6 +163,7 @@ Not to mention such a diagonal connection would either take up a lot of tiles or
 
 In the end, these are the tiles where a second knot can be for a first knot to connect to it, still assuming a knotreach of 6:
 
+```
 a : allowed tiles
 
 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
@@ -180,9 +181,11 @@ a : allowed tiles
 [ ][ ][ ][ ][ ][ ][a][a][a][ ][ ][ ][ ][ ][ ]
 [ ][ ][ ][ ][ ][ ][a][a][a][ ][ ][ ][ ][ ][ ]
 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+```
 
 The presence of a connection in a tile is tested by:
 
+```
 (tile tested -> boolean):
 	//check tiles between (-reach, 0) along the x axis
 	FOR tile IN (tiles WITH tested.y - reach < tile.y < 0 + reach AND tested.x == tile.x):
@@ -209,9 +212,11 @@ The presence of a connection in a tile is tested by:
 				IF knot.x < 0 AND tile.y - 1 <= knot.y <= tile.y + 1 :
 					RETURN TRUE
 	RETURN FALSE
+```
 
 It's possible to create lines
 
+```
 ... : arbitrary repetition of tiles assuming infinite reach
 
 [ ][ ][ ]...[ ][ ][ ]...[ ][ ][ ]...[ ][ ][ ]
@@ -224,9 +229,11 @@ It's possible to create lines
 [ ][c][c]...[c][k][c]...[c][c][ ]...[ ][ ][ ]
 [ ][k][c]...[c][c][ ]...[ ][ ][ ]...[ ][ ][ ]
 [ ][ ][ ]...[ ][ ][ ]...[ ][ ][ ]...[ ][ ][ ]
+```
 
 and curves
 
+```
 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][k]
 [ ][ ][ ][ ][ ][ ][ ][ ][k][ ][ ][ ][ ][ ][ ][ ]
 [ ][ ][ ][ ][k][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
@@ -242,19 +249,23 @@ and curves
 [c][k][c][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 [c][c][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 [k][c][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+```
 
 An ellipse follows:
 
+```
 sx, sy : semiaxis lengths x, y
 cx, cy : center coordinates x, y
  x,  y : coordinates of a point
 
 sx^2 * (y - cy)^2 + sy^2 * (x - cx)^2 = sx^2 * sy^2 -> CONSTANT
+```
 
 To draw a quarter of a ellipse with knots:
 
 We're going to operate in a quadrant made up of these points:
 
+```
 f : FROM, point from where we start building
 t : TO, point towards where we start building
 c : CENTER, point that represents the center of the elliptic curve (in the middle of the foci)
@@ -264,21 +275,33 @@ a : ANTICENTER, point of the quadrant opposite to the center
 [a]...[t]
 ...   ...
 [f]...[c]
+```
 
 Take from and vary it by 1 in the opposite direction from the center, making it one point further from the center. We'll call this the REFERENCE point.
 
+```
 r : REFERENCE point
 
 [ ][a]...[t]
 ......   ...
 [r][f]...[c]
+```
 
-We calculate sqr(sx) * sqr(y - cy) + sqr(sy) * sqr(x - cx) of the REFERENCE
+We calculate
+```
+sqr(sx) * sqr(y - cy) + sqr(sy) * sqr(x - cx)
+```
+of the REFERENCE
 
-Keep checking the value of sqr(sx) * sqr(y - cy) + sqr(sy) * sqr(x - cx) for every point from FROM to ANTICENTER
+Keep checking the value of
+```
+sqr(sx) * sqr(y - cy) + sqr(sy) * sqr(x - cx)
+```
+for every point from FROM to ANTICENTER
 
 If it's more than the reach of the knot, put a new knot and continue.
 
+```
 k : knot
 
 [ ][a][ ]...[t]
@@ -286,17 +309,21 @@ k : knot
 [ ][k][ ]...[ ]
 ......   ...
 [r][f][ ]...[c]
+```
 
 If sqr(sx) * sqr(y - cy) + sqr(sy) * sqr(x - cx) exceeds the one calculated for REFERENCE, we move it in the other axis towards the CENTER and keep moving in that direction and checking sqr(sx) * sqr(y - cy) + sqr(sy) * sqr(x - cx) until it doesn't exceed the one calculated for REFERENCE anymore.
 
+```
 [ ][a]...[ ]...[t]
 ......   ...   ...
 [ ][ ]...[k]...[ ]
 ......   ...   ...
 [r][f]...[ ]...[c]
+```
 
 If moving it more would put it out of reach from the previous knot, we move it in the other axis towards the center so the sqr(sx) * sqr(y - cy) + sqr(sy) * sqr(x - cx) doesn't exceed that of REFERENCE anymore.
 
+```
 [ ][a]...[ ]...[t]
 ......   ...   ...
 [ ][ ]...[ ]...[!]
@@ -316,6 +343,7 @@ If moving it more would put it out of reach from the previous knot, we move it i
 [ ][ ]...[k]...[ ]
 ......   ...   ...
 [r][f]...[ ]...[c]
+```
 
 We repeat this process until the tile we're testing is both within reach of the previous knot and TO.
 
