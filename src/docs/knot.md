@@ -311,7 +311,15 @@ k : knot
 [r][f][ ]...[c]
 ```
 
-If sqr(sx) * sqr(y - cy) + sqr(sy) * sqr(x - cx) exceeds the one calculated for REFERENCE, we move it in the other axis towards the CENTER and keep moving in that direction and checking sqr(sx) * sqr(y - cy) + sqr(sy) * sqr(x - cx) until it doesn't exceed the one calculated for REFERENCE anymore.
+If
+```
+sqr(sx) * sqr(y - cy) + sqr(sy) * sqr(x - cx)
+```
+exceeds the one calculated for REFERENCE, we move it in the other axis towards the CENTER and keep moving in that direction and checking
+```
+sqr(sx) * sqr(y - cy) + sqr(sy) * sqr(x - cx)
+```
+until it doesn't exceed the one calculated for REFERENCE anymore.
 
 ```
 [ ][a]...[ ]...[t]
@@ -321,7 +329,11 @@ If sqr(sx) * sqr(y - cy) + sqr(sy) * sqr(x - cx) exceeds the one calculated for 
 [r][f]...[ ]...[c]
 ```
 
-If moving it more would put it out of reach from the previous knot, we move it in the other axis towards the center so the sqr(sx) * sqr(y - cy) + sqr(sy) * sqr(x - cx) doesn't exceed that of REFERENCE anymore.
+If moving it more would put it out of reach from the previous knot, we move it in the other axis towards the center so the
+```
+sqr(sx) * sqr(y - cy) + sqr(sy) * sqr(x - cx)
+```
+doesn't exceed that of REFERENCE anymore.
 
 ```
 [ ][a]...[ ]...[t]
