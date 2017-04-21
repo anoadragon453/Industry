@@ -53,7 +53,7 @@ Rivers can't flow straight. They have to keep making curves.
 
 
 
-Water pressure could indicate how far a water supply can supply.
+Water pressure could indicate how far a water supply can supply?
 
 
 
@@ -62,11 +62,6 @@ Habitan sus propios poblados, pequeños núcleos de población consistentes en un c
 Se puede comerciar con ellos, intercambiando recursos. Normalmente ofrecen minerales, plantas y animales.
 Pueden incorporarse a la civilización, buscar trabajo en tu ciudad, irse a vivr allí...
 Su crecimiento poblacional está limitado, y unos pocos de sus habitantes tienen formación avanzada.
-
-
-
-Evolución de un edificio:
-Torre de telégrafo > Torre de teléfono > Torre de telecomunicaciones
 
 
 
@@ -79,8 +74,6 @@ Nurseries take care of children when their parents aren't present, allowing both
 -nurse
 
 
-
-//Una unidad equivale a 1/18 m^3 ó 1 fanega?
 
 1 fanega (10*10 tiles): enough to maintain one cow
 
