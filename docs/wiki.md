@@ -1,8 +1,9 @@
 # <a name="Wiki"></a>Wiki
 
+[Readme](../README.md)
+
 # <a name="Index"></a>Index
 
-[Readme](../README.md)
 [Back to beginning of file](#Wiki)
 1. [Introduction](#Introduction)
 2. [Index](#Index)
