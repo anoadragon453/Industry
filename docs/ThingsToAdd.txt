@@ -84,7 +84,7 @@ Nurseries take care of children when their parents aren't present, allowing both
 
 1 fanega (10*10 tiles): enough to maintain one cow
 
-A tile (8*8 m2) yields on average 8 kg of a crop.
+A tile (8*8 m2) yields on average 8 kg of a crop per year.
 
 
 
