@@ -13,13 +13,13 @@ v0.0
 Javier Centeno Vega <jacenve@telefonica.net> - Programmer and designer
 ```
 
-# Index<a name="Index"></a>
+# <a name="Index"></a>Index
 
 1. [Introduction](#Industry)
 2. [Index](#Index)
 3. [Contents](#Contents)
 
-# Contents<a name="Contents"></a>
+# <a name="Contents"></a>Contents
 
 [Back to index](#Index)
 1. [One](#Contents.One)
@@ -27,7 +27,7 @@ Javier Centeno Vega <jacenve@telefonica.net> - Programmer and designer
 3. [Three](#Contents.Three)
 
 
-## Contents.One<a name="Contents.One"></a>
-## Contents.Two<a name="Contents.Two"></a>
-## Contents.Three<a name="Contents.Three"></a>
+## <a name="Contents.One"></a>Contents.One
+## <a name="Contents.Two"></a>Contents.Two
+## <a name="Contents.Three"></a>Contents.Three
 
