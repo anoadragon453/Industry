@@ -20,4 +20,8 @@
 
 ### Mineral resources
 
+* [Water](./water.md)
+
 ### Manufactured resources
+
+* [Electricity](./electricity.md)
