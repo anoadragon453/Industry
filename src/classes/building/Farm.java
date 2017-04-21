@@ -75,11 +75,9 @@ public class Farm extends Building {
 		if(growth > 0) {
 			++growth;
 			//payWages();
-		} else if(((w.date - Resource.naturalResources.get(crop).harvest - 1) % 12) == 0) {
-			/* That is, if it's the month after harvest month for this crop,
-			 * it can start increasing from 0 because the growth cycle started.
-			 * If growth equals 0 and it's not such month, it can only increase again at that month
-			 * because growth should start at that month only and end at harvest month.
+		} else if(true) {
+			/* TODO: CHECK IF THIS MONTH IS WARM ENOUGH FOR THE CROP TO START GROWING
+			 * THEN THE CROP MAY START GROWING, ELSE IT STAYS AT 0 UNTIL WARM ENOUGH
 			 */
 			++growth;
 			//payWages();
