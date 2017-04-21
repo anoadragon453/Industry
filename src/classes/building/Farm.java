@@ -76,7 +76,7 @@ public class Farm extends Building {
 			++growth;
 			//payWages();
 		} else if(true) {
-			/* TODO: CHECK IF THIS MONTH IS WARM ENOUGH FOR THE CROP TO START GROWING
+			/* TODO: CHECK IF THIS MONTH AT THIS PLACE IS WARM ENOUGH FOR THE CROP TO START GROWING
 			 * THEN THE CROP MAY START GROWING, ELSE IT STAYS AT 0 UNTIL WARM ENOUGH
 			 */
 			++growth;
