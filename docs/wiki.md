@@ -5,9 +5,8 @@
 # <a name="Index"></a>Index
 
 [Back to beginning of file](#Wiki)
-1. [Introduction](#Introduction)
-2. [Index](#Index)
-3. [Contents](#Contents)
+1. [Index](#Index)
+2. [Contents](#Contents)
 
 # <a name="Contents"></a>Contents
 
