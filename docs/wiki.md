@@ -6,24 +6,13 @@
 
 [Back to beginning of file](#Wiki)
 1. [Index](#Index)
-2. [Contents](#Contents)
+2. [Types](#Types)
 
-# <a name="Contents"></a>Contents
+# <a name="Types"></a>Types
 
 [Back to index](#Index)
-1. [Resources](#Contents.Resources)
-2. [Buildings](#Contents.Buildings)
-3. [Knots](#Contents.Knots)
-4. [Units](#Contents.Units)
+1. [Resources](./resources/resources.md)
+2. [Buildings](./buildings/buildings.md)
+3. [Knots](./buildings/knots.md)
+4. [Units](./buildings/units.md)
 
-## <a name="Contents.Resources"></a>Resources
-
-### Natural resources
-
-* [Wheat](./wheat.md)
-* [Corn](./corn.md)
-* [Rice](./rice.md)
-
-## <a name="Contents.Buildings"></a>Buildings
-## <a name="Contents.Knots"></a>Knots
-## <a name="Contents.Units"></a>Units
