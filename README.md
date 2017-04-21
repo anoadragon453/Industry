@@ -1,4 +1,4 @@
-# Industry
+# Industry<a name="Industry"></a>
 This project is licensed under a GNU general public license.
 
 ```
@@ -13,13 +13,13 @@ v0.0
 Javier Centeno Vega <jacenve@telefonica.net> - Programmer and designer
 ```
 
-# Index
+# Index<a name="Index"></a>
 
 1. [Introduction](#Industry)
 2. [Index](#Index)
 3. [Contents](#Contents)
 
-# Contents
+# Contents<a name="Contents"></a>
 
 [Back to index](#Index)
 1. [One](#Contents.One)
@@ -27,7 +27,7 @@ Javier Centeno Vega <jacenve@telefonica.net> - Programmer and designer
 3. [Three](#Contents.Three)
 
 
-## Contents.One
-## Contents.Two
-## Contents.Three
+## Contents.One<a name="Contents.One"></a>
+## Contents.Two<a name="Contents.Two"></a>
+## Contents.Three<a name="Contents.Three"></a>
 
