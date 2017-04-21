@@ -12,9 +12,11 @@
 
 ### Soil resources
 
-* [Wheat](./wheat.md)
-* [Corn](./corn.md)
-* [Rice](./rice.md)
+* [Limestone](./limestone.md)
+* [Sand](./sand.md)
+* [Silt](./silt.md)
+* [Clay](./clay.md)
+* [Peat](./peat.md)
 
 ### Mineral resources
 
