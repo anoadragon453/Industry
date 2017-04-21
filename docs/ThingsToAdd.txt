@@ -159,11 +159,7 @@ el precio al que se vende un producto privado depende de la variedad de empresas
 
 resource properties
 type -> luxury
-boolean -> storeable (if false, it's strictly a "flow" resource)
-
-
-
-border police: police that watches over a line and catches whoever steps in that line of tiles
+boolean -> storeable? maybe not indicate whether is storeable but destroy resources that can't be stored anywhere.
 
 
 
@@ -175,11 +171,11 @@ gdp'(t)  gdp''(t)
 -        -        red (economy is shrinking, shrinkage is accelerating)
 
 plot population:
-gdp'(t)  gdp''(t)
-+        +        blue (population is growing, growth is accelerating)
-+        -        baby blue (population is growing, growth is stalling)
--        +        light green (population is shrinking, shrinkage is stalling)
--        -        green (population is shrinking, shrinkage is accelerating)
+size'(t) size''(t)
++        +        green (population is growing, growth is accelerating)
++        -        light green (population is growing, growth is stalling)
+-        +        light blue (population is shrinking, shrinkage is stalling)
+-        -        blue (population is shrinking, shrinkage is accelerating)
 
 
 
