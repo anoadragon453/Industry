@@ -1,54 +1,34 @@
 Edict ideas:
 
--Ley de vagos y maleantes.
-Todos los mendigos dejan de recibir limosnas y solo recibirán programas sociales (si los hay). No pueden manifestarse ni opinar, así que su satisfacción política será siempre 0.
+-Martial law
+The army contributes to security as well as police, people who violate the law may be killed or harmed.
 
--Prohibir las bolsas de plástico.
-La producción y consumo de productos químicos se reducirá en un 25%.
+-Legalize abortion
+Lowers the chance of disabled children to appear if a pregnant person has access to healthcare, may reduce natality rates.
 
--Ley marcial.
-La policía y ejército matan directamente a cualquier delincuente que vean, así que la tendencia a delinquir cae a la mitad y no tienes que mantener a ningún delincuente. No puedes reformar obreros enemigos y la felicidad baja.
+-Free marriage
+Increases the likelihood of couples yielding babies.
 
--Legalización del aborto.
-Todos los fetos con enfermedades mentales o deformaciones son sacrificados sistemáticamente.
+-Mandatory education
+Basic education is mandatory.
 
--Adopción libre.
-Todas las parejas homosexuales con acceso a una oficina pueden adoptar bebés de otras parejas. Las parejas adoptarán con la misma frecuencia que otras parejas tienen hijos.
+-Military service
+All adults can be drafted, with a cost to their political satisfaction.
 
--Ilegalizar las manifesctaciones.
-Declara como criminales a los que participen en manifestaciones. La gente se manifiesta menos pero puedes detener o matar a los manifestados.
+-Pollution standards
+Polluting private businesses are forced to pay extra taxes.
 
--Educación básica obligatoria.
-Todos los que no la tengan reciben una educación básica si pueden.
+-Social security
 
--Servicio militar obligatorio.
+-Natality control
 
--Multas por contaminación.
-Las empresas privadas pagan dinero al estado en proporción a cuánto contaminen y al espacio que ocupen. Éstas podrían cambiar su directriz o cerrar al ser menos rentables.
-
--Ayudas sociales (a parados, a trabajadores, a jubilados, a estudiantes, a enfermos, a padres...)
-
--Control de la natalidad
-
-
-
-Barriles metálicos con tuberías complejas saliendo de ellos
-Barriles con herramientas y armas dentro
-
-Tetraristos usados para la señalización (son 4 palos naranjas con anillos fosforescentes (como un cono de señalización) en disposición tetraédrica para que uno de los palos esté perpendicular al suelo siempre)
-
-LEFER yogur brand
-
-Rainbowberry brand
+-Drug control
+Forbids drugs from being sold as commodities and leaves them only to be used medically. May cause crime.
 
 
 
 Settlers
-Citizens that have been paid to settle someplace. When told to settle, the unit becomes a crossroad with:
-	a tenement (inhabited by the citizens that formed the unit)
-	a office (paperworks, operated by the educated citizens that formed the unit if any)
-	a workshop
-	a farm
+Citizens that have been paid to settle someplace and are able to build buildings.
 
 
 
@@ -66,10 +46,6 @@ Las ofertas de comercio van variando.
 -Los precios internacionales pueden variar (y lo harán continuamente) y el precio de las ofertas variará cuasiproporcionalmente. Si la varación es muy grande y significativa (+-10% por unidad) se te ofrecerá la opción de interrumpir la oferta si es una variación desfavorable. Recíprocamente, la oferta tiene un 20% de probabilidades de ser interrumpida si te favorece mucho.
 -Un jugador humano en modo multijugador puede hacer ofertas mediante proposiciones de oferta y acuerdo de otro jugador.
 -Se puede prohibir la importación o exportación de ciertos bienes por parte de ciudadanos privados.
-
-
-
-Options: GPU render and CPU render
 
 
 
@@ -104,23 +80,7 @@ Nurseries take care of children when their parents aren't present, allowing both
 
 
 
-Drugs (medicines) can be sold massively as any other good by default. Their commerce can also be controlled.
-Law: Drug control
-
-
-
-Indigencia
-
-
-
-Información
-Producida en laboratorios, universidades, medios de comunicación, oficinas, edificios del gobierno, bares, estaciones de autobús, foros. La cantidad de información almacenada afecta a la educación e investigación.
-
-
-
 //Una unidad equivale a 1/18 m^3 ó 1 fanega?
-
-
 
 1 fanega (10*10 tiles): enough to maintain one cow
 
@@ -204,23 +164,6 @@ boolean -> storeable (if false, it's strictly a "flow" resource)
 
 
 border police: police that watches over a line and catches whoever steps in that line of tiles
-
-
-
-type: triggertype{
-	function
-}
-type: trigger{
-	private id
-	private mode
-	getid{
-		if(mode = specific)
-			return id
-		if(mode = beartrap)
-			return unit who stepped in this
-	}
-}
-is placed on a tile, triggers a function (corresponding triggertype) when a unit steps on it, over a certain id or mode
 
 
 
