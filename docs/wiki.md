@@ -18,7 +18,11 @@
 
 ## <a name="Contents.Resources"></a>Resources
 
+### Natural resources
+
 * [Wheat](./wheat.md)
+* [Corn](./corn.md)
+* [Rice](./rice.md)
 
 ## <a name="Contents.Buildings"></a>Buildings
 ## <a name="Contents.Knots"></a>Knots
