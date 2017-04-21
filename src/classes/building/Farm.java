@@ -3,6 +3,7 @@ package classes.building;
 import classes.Building;
 import classes.Citizen;
 import classes.Player;
+import classes.Resource;
 import classes.World;
 
 public class Farm extends Building {
@@ -44,6 +45,7 @@ public class Farm extends Building {
 	 * ----1--- : Flood resistance: can still produce over the accepted humidity level, but with low productivity.
 	 * ---1---- : Pest resistance: resists pests.
 	 * --1----- : Hyperadaptability: doesn't pollute.
+	 * 11------ : Extra production
 	 */
 	public byte genetic;
 	public byte growth;
@@ -70,23 +72,38 @@ public class Farm extends Building {
 	 */
 	
 	@Override public void produce(World w) {
-		/*
-		if(growth > 0){
-		++growth;
-			payWages();
-		}else if(((w.date - harvest_month_of_the_crop_of_this_farm - 1) % 12) == 0){
-		//That is, if it's the month after harvest month for this crop, it can start increasing from 0 because the growth cycle started
+		if(growth > 0) {
 			++growth;
-			payWages();
+			//payWages();
+		} else if(((w.date - Resource.naturalResources.get(crop).harvest - 1) % 12) == 0) {
+			/* That is, if it's the month after harvest month for this crop,
+			 * it can start increasing from 0 because the growth cycle started.
+			 * If growth equals 0 and it's not such month, it can only increase again at that month
+			 * because growth should start at that month only and end at harvest month.
+			 */
+			++growth;
+			//payWages();
 		}
-		if(growth >= 12){//Shouldn't really ever be higher than 12, but just in case.
-			growth = 0;
-			for every tile in a certain radius, up to the amount of tiles the amount of farmers can work with their tools and experience
-				produce an amount of crop proportional to how fit the terrain of that tile is to that resource
-				(temperature, humidity, groundresource...)
+		if(growth >= 12) {//Shouldn't really ever be higher than 12, but just in case.
+			if(greenhouses) {
+				growth = 11;
+			} else {
+				growth = 0;
+			}
+			
+			/*	for every tile in a certain radius, up to the amount of tiles the amount of farmers can work with their tools and experience
+				produce the following amount of crop:
+				
+				base production per tile
+				+ versatility of resource
+				- absolute difference between temperature and optimal temperature, or 0 if greenhouses is on
+				- absolute difference between humidity and optimal humidity, or 0 if irrigation is on and there's water to maintain the crop
+				+ fertility of soil resource
+				
+				divide by 12 and add one if greenhouses is on
+			*/
 		}
-		//If irrigation is on, produce as if humidity was optimal no matter what. If greenhouses is on, produce as if temperature was optimal and every month (but a smaller amount than if it was a yearly harvest).
-		*/
+		
 	}
 	
 	//choosing a crop requires consuming a unit of that resource, the seeds to plant it don't magically pop into existence after all

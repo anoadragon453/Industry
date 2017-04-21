@@ -27,49 +27,49 @@ public class Resource implements Nameable {
 	public static ArrayList<ManufacturedResource> manufacturedResources = new ArrayList<ManufacturedResource>();
 	
 	static {
-		newNaturalResource("wheat"     ,   0,   0,   0,   0,   1,   0,true );
-		newNaturalResource("corn"      ,   0,   0,   0,   0,   1,   0,true );
-		newNaturalResource("rice"      ,   0,   0,   0,   0,   1,   0,true );//Humidity of 0: it may generate on shallow water or swampy land
-		newNaturalResource("legumes"   ,   0,   0,   0,   0,   1,   0,true );
-		newNaturalResource("soy"       ,   0,   0,   0,   0,   1,   0,false);
-		newNaturalResource("palm"      ,   0,   0,   0,   0,  -6,   0,true );
-		newNaturalResource("ananas"    ,   0,   0,   0,   0,   1,   0,true );
-		newNaturalResource("banana"    ,   0,   0,   0,   0,   1,   0,true );
-		newNaturalResource("canes"     ,   0,   0,   0,   0,  -1,   0,false);//Humidity of 0: it may generate on shallow water or swampy land
-		newNaturalResource("oak"       ,   0,   0,   0,   0,  -8,   0,false);
-		newNaturalResource("rubbertree",   0,   0,   0,   0,  -6,   0,false);
-		newNaturalResource("birch"     ,   0,   0,   0,   0,  -8,   0,false);
-		newNaturalResource("eucalypt"  ,   0,   0,   0,   0,  -8,   0,false);
-		newNaturalResource("beech"     ,   0,   0,   0,   0,  -8,   0,false);
-		newNaturalResource("ash"       ,   0,   0,   0,   0,  -8,   0,false);
-		newNaturalResource("maple"     ,   0,   0,   0,   0,  -8,   0,false);
-		newNaturalResource("fir"       ,   0,   0,   0,   0,  -8,   0,false);
-		newNaturalResource("flowers"   ,   0,   0,   0,   0,  -1,   0,false);
-		newNaturalResource("tea"       ,   0,   0,   0,   0,   1,   0,false);
-		newNaturalResource("coffee"    ,   0,   0,   0,   0,  -2,   0,false);
-		newNaturalResource("cocoa"     ,   0,   0,   0,   0,  -4,   0,false);
-		newNaturalResource("berries"   ,   0,   0,   0,   0,   1,   0,true );
-		newNaturalResource("cacti"     ,   0,   0,   0,   0,  -1,   0,true );
-		newNaturalResource("cabbage"   ,   0,   0,   0,   0,   1,   0,true );
-		newNaturalResource("tubers"    ,   0,   0,   0,   0,   1,   0,true );
-		newNaturalResource("tobacco"   ,   0,   0,   0,   0,   1,   0,false);
-		newNaturalResource("coca"      ,   0,   0,   0,   0,   1,   0,false);
-		newNaturalResource("cotton"    ,   0,   0,   0,   0,   1,   0,false);
-		newNaturalResource("flax"      ,   0,   0,   0,   0,   1,   0,false);
-		newNaturalResource("hemp"      ,   0,   0,   0,   0,   1,   0,false);
-		newNaturalResource("algae"     ,   0,   0,  -8,   0,  -3,   0,true );//Negative landLevel - waterLevel means the water level is over land
-		newNaturalResource("cow"       ,   0,   0,   0,   0,   1,   0,true );//Per tile, of course. Take into account that you need 100 tiles to maintain a cow.
-		newNaturalResource("sheep"     ,   0,   0,   0,   0,   1,   0,true );
-		newNaturalResource("goat"      ,   0,   0,   0,   0,   1,   0,true );
-		newNaturalResource("llama"     ,   0,   0,   0,   0,   1,   0,true );
-		newNaturalResource("pig"       ,   0,   0,   0,   0,   1,   0,true );
-		newNaturalResource("chicken"   ,   0,   0,   0,   0,   1,   0,true );
-		newNaturalResource("fish"      ,   0,   0,  -8,   0,   1,   0,true );//Negative landLevel - waterLevel means the water level is over land
-		newSoilResource("limestone",   0,   0,   0);
-		newSoilResource("sand"     ,   0,   4,   1);
-		newSoilResource("silt"     ,   0,   8,   3);
-		newSoilResource("clay"     ,   0,  16,   2);
-		newSoilResource("peat"     ,   0,  32,   3);
+		newNaturalResource("wheat"     ,   0,true ,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("corn"      ,   0,true ,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("rice"      ,   0,true ,   0,   0,   0,   0,   0,   1);//Humidity of 0: it may generate on shallow water or swampy land
+		newNaturalResource("legumes"   ,   0,true ,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("soy"       ,   0,false,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("palm"      ,   0,true ,   0,   0,   0,   0,   0,  -6);
+		newNaturalResource("ananas"    ,   0,true ,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("banana"    ,   0,true ,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("canes"     ,   0,false,   0,   0,   0,   0,   0,  -1);//Humidity of 0: it may generate on shallow water or swampy land
+		newNaturalResource("oak"       ,   0,false,  -1,   0,   0,   0,   0,  -8);
+		newNaturalResource("rubbertree",   0,false,  -1,   0,   0,   0,   0,  -6);
+		newNaturalResource("birch"     ,   0,false,  -1,   0,   0,   0,   0,  -8);
+		newNaturalResource("eucalypt"  ,   0,false,  -1,   0,   0,   0,   0,  -8);
+		newNaturalResource("beech"     ,   0,false,  -1,   0,   0,   0,   0,  -8);
+		newNaturalResource("ash"       ,   0,false,  -1,   0,   0,   0,   0,  -8);
+		newNaturalResource("maple"     ,   0,false,  -1,   0,   0,   0,   0,  -8);
+		newNaturalResource("fir"       ,   0,false,  -1,   0,   0,   0,   0,  -8);
+		newNaturalResource("flowers"   ,   0,false,   0,   0,   0,   0,   0,  -1);
+		newNaturalResource("tea"       ,   0,false,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("coffee"    ,   0,false,   0,   0,   0,   0,   0,  -2);
+		newNaturalResource("cocoa"     ,   0,false,   0,   0,   0,   0,   0,  -4);
+		newNaturalResource("berries"   ,   0,true ,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("cacti"     ,   0,true ,   0,   0,   0,   0,   0,  -1);
+		newNaturalResource("cabbage"   ,   0,true ,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("tubers"    ,   0,true ,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("tobacco"   ,   0,false,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("coca"      ,   0,false,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("cotton"    ,   0,false,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("flax"      ,   0,false,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("hemp"      ,   0,false,   0,   0,   0,   0,   0,   1);
+		newNaturalResource("algae"     ,   0,true ,  -1,   0,  -8,   0,   0,  -3);//Negative landLevel - waterLevel means the water level is over land
+		newNaturalResource("cow"       ,   0,true ,  -1,   0,   0,   0,   0,   1);//Per tile, of course. Take into account that you need 100 tiles to maintain a cow.
+		newNaturalResource("sheep"     ,   0,true ,  -1,   0,   0,   0,   0,   1);
+		newNaturalResource("goat"      ,   0,true ,  -1,   0,   0,   0,   0,   1);
+		newNaturalResource("llama"     ,   0,true ,  -1,   0,   0,   0,   0,   1);
+		newNaturalResource("pig"       ,   0,true ,  -1,   0,   0,   0,   0,   1);
+		newNaturalResource("chicken"   ,   0,true ,  -1,   0,   0,   0,   0,   1);
+		newNaturalResource("fish"      ,   0,true ,  -1,   0,  -8,   0,   0,   1);//Negative landLevel - waterLevel means the water level is over land
+		newSoilResource("limestone",   0,   0,  -8);
+		newSoilResource("sand"     ,   0,   4,  -4);
+		newSoilResource("silt"     ,   0,   8,   2);
+		newSoilResource("clay"     ,   0,  16,   0);
+		newSoilResource("peat"     ,   0,  32,   4);
 	}
 	
 	// Class fields --------------------------------
@@ -82,8 +82,8 @@ public class Resource implements Nameable {
 		this.rarity = rarity;
 	}
 	
-	public static void newNaturalResource(String type, int rarity, int optimalTemperature, int optimalHumidity, int versatility, int pollutionImpact, int harvest, boolean edible) {
-		naturalResources.add(new NaturalResource(type, rarity, optimalTemperature, optimalHumidity, versatility, pollutionImpact, harvest, edible));
+	public static void newNaturalResource(String type, int rarity, boolean edible, int harvest, int optimalTemperature, int optimalHumidity, int versatility, int yield, int pollutionImpact) {
+		naturalResources.add(new NaturalResource(type, rarity, edible, harvest, optimalTemperature, optimalHumidity, versatility, yield, pollutionImpact));
 		naturalResourcesRarity += rarity;
 		if(naturalResourcesMaxVersatility < versatility) {
 			naturalResourcesMaxVersatility = versatility;
@@ -176,30 +176,32 @@ public class Resource implements Nameable {
 	public static class NaturalResource extends Resource {
 		// Class fields --------------------------------
 		String type;
-		boolean edible;
+		public boolean edible;
 		/**
 		 * Month of harvest. -1 if none.
 		 */
-		int harvest;
-		int optimalTemperature;
-		int optimalHumidity;
+		public int harvest;
+		public int optimalTemperature;
+		public int optimalHumidity;
 		/**
 		 * How resistant this resource is to different temperatures and humidities.
 		 */
-		int versatility;
+		public int versatility;
+		public int yield;
 		/**
 		 * Variation of pollution the presence of this resource causes.
 		 */
-		int pollutionImpact;
+		public int pollutionImpact;
 		// Constructors --------------------------------
-		private NaturalResource(String type, int rarity, int optimalTemperature, int optimalHumidity, int versatility, int pollutionImpact, int harvest, boolean edible) {
+		private NaturalResource(String type, int rarity, boolean edible, int harvest, int optimalTemperature, int optimalHumidity, int versatility, int yield, int pollutionImpact) {
 			super(rarity);
 			this.type = type;
-			this.edible = true;
+			this.edible = edible;
 			this.harvest = harvest;
 			this.optimalTemperature = optimalTemperature;
 			this.optimalHumidity = optimalHumidity;
 			this.versatility = versatility;
+			this.yield = yield;
 			this.pollutionImpact = pollutionImpact;
 		}
 		// Methods --------------------------------
@@ -211,11 +213,11 @@ public class Resource implements Nameable {
 	public static class SoilResource extends Resource {
 		// Class fields --------------------------------
 		String type;
-		int typicalHumidity;
+		public int typicalHumidity;
 		/**
 		 * How fertile this resource makes the soil.
 		 */
-		int fertility;
+		public int fertility;
 		// Constructors --------------------------------
 		private SoilResource(String type, int rarity, int typicalHumidity, int fertility) {
 			super(rarity);
@@ -232,7 +234,7 @@ public class Resource implements Nameable {
 	public static class MineralResource extends Resource {
 		// Class fields --------------------------------
 		String type;
-		boolean solid;
+		public boolean solid;
 		// Constructors --------------------------------
 		private MineralResource(String type, int rarity, boolean solid) {
 			super(rarity);
@@ -247,7 +249,7 @@ public class Resource implements Nameable {
 	public static class ManufacturedResource extends Resource {
 		// Class fields --------------------------------
 		String type;
-		boolean luxury;
+		public boolean luxury;
 		// Constructors --------------------------------
 		private ManufacturedResource(String type, boolean luxury) {
 			super(0);

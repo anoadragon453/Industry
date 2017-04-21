@@ -12,6 +12,10 @@
 
 ### Soil resources
 
+* [Wheat](./wheat.md)
+* [Corn](./corn.md)
+* [Rice](./rice.md)
+
 ### Mineral resources
 
 ### Manufactured resources
