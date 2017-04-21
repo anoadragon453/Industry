@@ -16,10 +16,9 @@
 3. [Knots](#Contents.Knots)
 4. [Units](#Contents.Units)
 
-
 ## <a name="Contents.Resources"></a>Resources
-* Corn
-* Wheat
+
+* [Wheat](./wheat.md)
 
 ## <a name="Contents.Buildings"></a>Buildings
 ## <a name="Contents.Knots"></a>Knots
