@@ -64,7 +64,10 @@ public class Resource implements Nameable {
 		newNaturalResource("llama"     ,   0,true ,   0,   0,   0,   0,   1);
 		newNaturalResource("pig"       ,   0,true ,   0,   0,   0,   0,   1);
 		newNaturalResource("chicken"   ,   0,true ,   0,   0,   0,   0,   1);
-		newNaturalResource("fish"      ,   0,true ,   0,  -8,   0,   0,   1);//Negative landLevel - waterLevel means the water level is over land
+		newNaturalResource("tuna"      ,   0,true ,   0,  -8,   0,   0,   1);//Negative landLevel - waterLevel means the water level is over land
+		newNaturalResource("salmon"    ,   0,true ,   0,  -8,   0,   0,   1);//Negative landLevel - waterLevel means the water level is over land
+		newNaturalResource("carp"      ,   0,true ,   0,  -8,   0,   0,   1);//Negative landLevel - waterLevel means the water level is over land
+		newNaturalResource("bass"      ,   0,true ,   0,  -8,   0,   0,   1);//Negative landLevel - waterLevel means the water level is over land
 		newSoilResource("limestone",   0,   0,  -8);
 		newSoilResource("sand"     ,   0,   4,  -4);
 		newSoilResource("silt"     ,   0,   8,   2);
