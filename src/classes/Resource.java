@@ -38,13 +38,13 @@ public class Resource implements Nameable {
 		newNaturalResource("canes"     ,   0,false,   0,   0,   0,   0,  -1);//Humidity of 0: it may generate on shallow water or swampy land
 		newNaturalResource("oak"       ,   0,false,   0,   0,   0,   0,  -8);
 		newNaturalResource("rubbertree",   0,false,   0,   0,   0,   0,  -6);
+		newNaturalResource("mahogany"  ,   0,false,   0,   0,   0,   0,  -8);
 		newNaturalResource("birch"     ,   0,false,   0,   0,   0,   0,  -8);
 		newNaturalResource("eucalypt"  ,   0,false,   0,   0,   0,   0,  -8);
 		newNaturalResource("beech"     ,   0,false,   0,   0,   0,   0,  -8);
 		newNaturalResource("ash"       ,   0,false,   0,   0,   0,   0,  -8);
 		newNaturalResource("maple"     ,   0,false,   0,   0,   0,   0,  -8);
 		newNaturalResource("fir"       ,   0,false,   0,   0,   0,   0,  -8);
-		newNaturalResource("flowers"   ,   0,false,   0,   0,   0,   0,  -1);
 		newNaturalResource("tea"       ,   0,false,   0,   0,   0,   0,   1);
 		newNaturalResource("coffee"    ,   0,false,   0,   0,   0,   0,  -2);
 		newNaturalResource("cocoa"     ,   0,false,   0,   0,   0,   0,  -4);
