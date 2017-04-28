@@ -91,12 +91,6 @@ public class Resource implements Nameable {
 		}
 	}
 	
-	public static void main(String[] args) {
-		for(Resource r : naturalResources) {
-			System.out.println(r.getType());
-		}
-	}
-	
 	// Class fields --------------------------------
 	
 	public int rarity;
