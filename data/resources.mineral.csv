@@ -1,0 +1,20 @@
+water      ,   0, f
+coal       ,   0, t
+oil        ,   0, f
+gas        ,   0, f
+gems       ,   0, t
+salt       ,   0, t
+niter      ,   0, t
+gypsum     ,   0, t
+ironore    ,   0, t
+bauxite    ,   0, t
+cuprite    ,   0, t
+cassiterite,   0, t
+galena     ,   0, t
+wolframite ,   0, t
+uraninite  ,   0, t
+cinnabar   ,   0, t
+silverore  ,   0, t
+goldore    ,   0, t
+platinumore,   0, t
+rareearths ,   0, t
