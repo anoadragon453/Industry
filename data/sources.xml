@@ -1,6 +1,0 @@
-<!-- Use [ISO 639-1 code of language]_[ISO 3166-1 code of region] for naming -->
-
-<language name="Čeština (Česko)" file="cs_CZ.properties" image="czech.png" />
-<language name="English (US)" file="en_US.properties" image="unitedstatesofamerica.png" />
-<language name="Español (España)" file="es_ES.properties" image="flag_spain_blank.png" />
-<language name="François (France)" file="fr_FR.properties" image="france.png" />
