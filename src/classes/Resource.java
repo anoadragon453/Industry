@@ -1,5 +1,10 @@
 package classes;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.nio.file.Path;
 import java.util.ArrayList;
 
 import integerMath.Op;
@@ -27,7 +32,7 @@ public class Resource implements Nameable {
 	public static ArrayList<ManufacturedResource> manufacturedResources = new ArrayList<ManufacturedResource>();
 	
 	static {
-		newNaturalResource("wheat"     ,   0,true ,   0,   0,   0,   0,   1);
+		/*newNaturalResource("wheat"     ,   0,true ,   0,   0,   0,   0,   1);
 		newNaturalResource("corn"      ,   0,true ,   0,   0,   0,   0,   1);
 		newNaturalResource("rice"      ,   0,true ,   0,   0,   0,   0,   1);//Humidity of 0: it may generate on shallow water or swampy land
 		newNaturalResource("legumes"   ,   0,true ,   0,   0,   0,   0,   1);
@@ -72,7 +77,40 @@ public class Resource implements Nameable {
 		newSoilResource("sand"     ,   0,   4,  -4);
 		newSoilResource("silt"     ,   0,   8,   2);
 		newSoilResource("clay"     ,   0,  16,   0);
-		newSoilResource("peat"     ,   0,  32,   4);
+		newSoilResource("peat"     ,   0,  32,   4);*/
+		
+		try {
+			FileInputStream fis = new FileInputStream("..\\..\\..\\src\\sources\\resources.csv");
+			BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
+			String line = reader.readLine();
+			while(line != null) {
+				String[] values = line.split(",");
+				newNaturalResource(
+						values[0],
+						Integer.parseInt(values[1]),
+						values[2].startsWith("t"),
+						Integer.parseInt(values[3]),
+						Integer.parseInt(values[4]),
+						Integer.parseInt(values[5]),
+						Integer.parseInt(values[6]),
+						Integer.parseInt(values[7])
+						);
+				line = reader.readLine();
+			}
+		} catch(Throwable t) {
+			Path path1 = new File("C:\\Users\\Javier\\Desktop\\cosas\\Pending\\industry\\Workspace\\Industry\\bin\\classes\\Resource.class").toPath();
+			Path path2 = new File("C:\\Users\\Javier\\Desktop\\cosas\\Pending\\industry\\Workspace\\Industry\\src\\sources\\resources.csv").toPath();
+			Path relpath = path1.relativize(path2);
+			
+			System.out.println(relpath.toString());
+			t.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		for(Resource r : naturalResources) {
+			System.out.println(r.getType());
+		}
 	}
 	
 	// Class fields --------------------------------

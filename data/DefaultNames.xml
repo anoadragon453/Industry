@@ -1,0 +1,150 @@
+<civilization id="ESP">
+	<name id="civ" value="España" />
+	<tiles>
+		<name id="card.255.255" value="* Suroeste" />
+		<name id="card.255.000" value="* Sur" />
+		<name id="card.255.001" value="* Sureste" />
+		<name id="card.000.255" value="* Oeste" />
+		<name id="card.000.000" value="* Centro" />
+		<name id="card.000.001" value="* Este" />
+		<name id="card.000.255" value="* Noroeste" />
+		<name id="card.000.000" value="* Norte" />
+		<name id="card.000.001" value="* Noreste" />
+		<name id="city" value="Ciudad de *" />
+		<name id="city.metr" value="Metrópoli de *" />
+		<name id="city.nigh" value="Barrio de *" />
+		<name id="city.001" value="Madrid" />
+		<name id="city.002" value="Barcelona" />
+		<name id="city.003" value="Sevilla" />
+		<name id="city.003.255.000" value="las tres mil viviendas" />
+		<name id="city.003.000.255" value="Triana" />
+		<name id="city.003.000.001" value="Sevilla Este" />
+		<name id="city.003.001.000" value="Pino Montano" />
+		<name id="town" value="Pueblo de *" />
+		<name id="rivr" value="Río *" />
+		<name id="rivr.loow" value="Bajo *" />
+		<name id="rivr.high" value="Alto *" />
+		<name id="rivr.001" value="Ebro" />
+		<name id="rivr.002" value="Tajo" />
+		<name id="rivr.003" value="Guadalquivir" />
+		<name id="rivr.004" value="Guadiana" />
+		<name id="rivr.005" value="Segura" />
+		<name id="rivr.006" value="Júcar" />
+		<name id="rivr.007" value="Turia" />
+		<name id="rivr.008" value="Tinto" />
+		<name id="rivr.009" value="Miño" />
+		<name id="mont" value="Monte *" />
+		<name id="mont.001" value="Mulhacén" />
+		<name id="mont.002" value="Aneto" />
+		<name id="mont.003" value="Veleta" />
+		<name id="mont.004" value="Posets" />
+		<name id="mont.005" value="Alcazaba" />
+		<name id="mont.006" value="Perdido" />
+		<name id="mont.007" value="Maldito" />
+		<name id="mont.008" value="Espadas" />
+		<name id="mont.009" value="Cilindro" />
+		<name id="mont.010" value="de los Machos" />
+		<name id="mont.011" value="del Salón" />
+		<name id="mont.012" value="del Campanario" />
+		<name id="mont.013" value="Maladeta" />
+		<name id="mont.014" value="del Zacatín" />
+		<name id="mont.015" value="Viñamala" />
+		<name id="mont.016" value="Tempestades" />
+		<name id="mont.017" value="Añisclo" />
+		<name id="mont.018" value="Marboré" />
+		<name id="mont.019" value="de la Caldera" />
+		<name id="mont.020" value="Perdiguero" />
+		<name id="mont.021" value="Russell" />
+		<name id="mont.022" value="Loma Pelada" />
+		<name id="volc" value="Volcán *" />
+		<name id="volc.001" value="Teide" />
+		<name id="volc.002" value="Cumbre Vieja" />
+		<name id="volc.003" value="Malpaso" />
+		<name id="volc.004" value="Croscat" />
+		<name id="volc.005" value="Santa Margarita" />
+		<name id="volc.006" value="Teneguía" />
+		<name id="volc.007" value="La Restinga" />
+		<name id="volc.008" value="Nevado del Ruiz" />
+		<name id="volc.009" value="Santa Helena" />
+		<name id="volc.010" value="Santa María" />
+		<name id="volc.011" value="Turrialba" />
+		<name id="volc.012" value="Concepción" />
+		<name id="volc.013" value="San Salvador" />
+		<name id="volc.014" value="Santa Isabel" />
+		<name id="volc.015" value="Maderas" />
+		<name id="volc.016" value="Cerro Negro" />
+		<name id="volc.017" value="Robledo" />
+		<name id="volc.018" value="Falso Azufre" />
+		<name id="volc.019" value="Cerro Galán" />
+		<name id="volc.020" value="Cerro Medusa" />
+		<name id="volc.021" value="Nevado Tres Cruces" />
+		<name id="volc.022" value="Volcán San Francisco" />
+		<name id="volc.023" value="Planchón" />
+		<name id="volc.024" value="San José" />
+		<name id="volc.025" value="Cerro Pantojo" />
+		<name id="volc.026" value="Cerro Lucifer" />
+	</tiles>
+</civilization>
+<civilization id="GER">
+	<name id="civ" value="Germany" />
+	<tiles>
+		<name id="city.001" value="Berlin" />
+		<name id="city.002" value="Hamburgo" />
+		<name id="city.003.255.000" value="Harburg" />
+		<name id="city.003.000.255" value="Altona" />
+		<name id="city.003.000.001" value="Bergedorf" />
+		<name id="city.003.001.255" value="Eimsbüttel" />
+		<name id="city.003.001.000" value="Hamburg-Nord" />
+		<name id="city.003.001.001" value="Wandsbek" />
+		<name id="city.003" value="Múnich" />
+		<name id="city.003.255.000" value="Sendling" />
+		<name id="city.003.000.255" value="Nymphemburg" />
+		<name id="city.003.000.001" value="Bogenhausen" />
+		<name id="city.003.001.000" value="Schwabing" />
+		<name id="mont.001" value="Zugspitze" />
+		<name id="mont.002" value="Schneefernerkopf" />
+		<name id="mont.003" value="Wetterspitze" />
+		<name id="mont.004" value="Hochwanner" />
+		<name id="mont.005" value="Höllentalspitze" />
+		<name id="mont.006" value="Watzmann" />
+		<name id="mont.007" value="Hochblassen" />
+		<name id="mont.008" value="Wetterwandeck" />
+		<name id="mont.009" value="Dreitorspitze" />
+		<name id="mont.010" value="Plattspitze" />
+		<name id="mont.011" value="Hinterreintalschrofen" />
+		<name id="mont.012" value="Hochfrottspitze" />
+		<name id="mont.013" value="Mädelegabel" />
+		<name id="mont.014" value="Alpspitze" />
+		<name id="mont.015" value="Vollkarspitze" />
+		<name id="mont.016" value="Bockkarkopf" />
+		<name id="mont.017" value="Hochkalter" />
+		<name id="mont.018" value="Biberkopf" />
+		<name id="mont.019" value="Trettachspitze" />
+		<name id="mont.020" value="Großer Hundstod" />
+		<name id="mont.021" value="Hochvogel" />
+		<name id="mont.022" value="Funtenseetauern" />
+		<name id="mont.023" value="Öfnerspitze" />
+		<name id="mont.024" value="Schüsselkarspitze" />
+		<name id="mont.025" value="Krottenspitze" />
+		<name id="mont.026" value="The Berg" />
+		<name id="volc.001" value="Wasserkuppe" />
+		<name id="volc.002" value="Kreuzberg" />
+		<name id="volc.003" value="Schwabenhimmel" />
+		<name id="volc.004" value="Heidelstein" />
+		<name id="volc.005" value="Hohenhewen" />
+		<name id="volc.006" value="Hohenstoffeln" />
+		<name id="volc.007" value="Milseburg" />
+		<name id="volc.008" value="Feuerberg" />
+		<name id="volc.009" value="Ellenbogen" />
+		<name id="volc.010" value="Taufstein" />
+		<name id="volc.011" value="Hoherodskopf" />
+		<name id="volc.012" value="Hohe Acht" />
+		<name id="volc.013" value="Hohentwiel" />
+		<name id="volc.014" value="Mägdeberg" />
+		<name id="volc.015" value="Hohenkrähen" />
+		<name id="volc.016" value="Duppacher Weiher" />
+		<name id="volc.017" value="Hoher List" />
+		<name id="volc.018" value="Burgberg" />
+		<name id="volc.019" value="Laach" />
+	</tiles>
+</civilization>
