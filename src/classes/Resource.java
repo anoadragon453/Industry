@@ -80,26 +80,26 @@ public class Resource implements Nameable {
 		newSoilResource("peat"     ,   0,  32,   4);*/
 		
 		try {
-			FileInputStream fis = new FileInputStream("..\\..\\..\\src\\sources\\resources.csv");
+			FileInputStream fis = new FileInputStream("data\\resources.csv");
 			BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
 			String line = reader.readLine();
 			while(line != null) {
 				String[] values = line.split(",");
 				newNaturalResource(
-						values[0],
-						Integer.parseInt(values[1]),
-						values[2].startsWith("t"),
-						Integer.parseInt(values[3]),
-						Integer.parseInt(values[4]),
-						Integer.parseInt(values[5]),
-						Integer.parseInt(values[6]),
-						Integer.parseInt(values[7])
+						values[0].trim(),
+						Integer.parseInt(values[1].trim()),
+						values[2].trim().startsWith("t"),
+						Integer.parseInt(values[3].trim()),
+						Integer.parseInt(values[4].trim()),
+						Integer.parseInt(values[5].trim()),
+						Integer.parseInt(values[6].trim()),
+						Integer.parseInt(values[7].trim())
 						);
 				line = reader.readLine();
 			}
 		} catch(Throwable t) {
 			Path path1 = new File("C:\\Users\\Javier\\Desktop\\cosas\\Pending\\industry\\Workspace\\Industry\\bin\\classes\\Resource.class").toPath();
-			Path path2 = new File("C:\\Users\\Javier\\Desktop\\cosas\\Pending\\industry\\Workspace\\Industry\\src\\sources\\resources.csv").toPath();
+			Path path2 = new File("C:\\Users\\Javier\\Desktop\\cosas\\Pending\\industry\\Workspace\\Industry\\data\\resources.csv").toPath();
 			Path relpath = path1.relativize(path2);
 			
 			System.out.println(relpath.toString());

@@ -1,0 +1,41 @@
+wheat     ,   0,true ,   0,   0,   0,   0,   1
+corn      ,   0,true ,   0,   0,   0,   0,   1
+rice      ,   0,true ,   0,   0,   0,   0,   1
+legumes   ,   0,true ,   0,   0,   0,   0,   1
+soy       ,   0,false,   0,   0,   0,   0,   1
+palm      ,   0,true ,   0,   0,   0,   0,  -6
+ananas    ,   0,true ,   0,   0,   0,   0,   1
+banana    ,   0,true ,   0,   0,   0,   0,   1
+canes     ,   0,false,   0,   0,   0,   0,  -1
+oak       ,   0,false,   0,   0,   0,   0,  -8
+rubbertree,   0,false,   0,   0,   0,   0,  -6
+mahogany  ,   0,false,   0,   0,   0,   0,  -8
+birch     ,   0,false,   0,   0,   0,   0,  -8
+eucalypt  ,   0,false,   0,   0,   0,   0,  -8
+beech     ,   0,false,   0,   0,   0,   0,  -8
+ash       ,   0,false,   0,   0,   0,   0,  -8
+maple     ,   0,false,   0,   0,   0,   0,  -8
+fir       ,   0,false,   0,   0,   0,   0,  -8
+tea       ,   0,false,   0,   0,   0,   0,   1
+coffee    ,   0,false,   0,   0,   0,   0,  -2
+cocoa     ,   0,false,   0,   0,   0,   0,  -4
+berries   ,   0,true ,   0,   0,   0,   0,   1
+cacti     ,   0,true ,   0,   0,   0,   0,  -1
+cabbage   ,   0,true ,   0,   0,   0,   0,   1
+tubers    ,   0,true ,   0,   0,   0,   0,   1
+tobacco   ,   0,false,   0,   0,   0,   0,   1
+coca      ,   0,false,   0,   0,   0,   0,   1
+cotton    ,   0,false,   0,   0,   0,   0,   1
+flax      ,   0,false,   0,   0,   0,   0,   1
+hemp      ,   0,false,   0,   0,   0,   0,   1
+algae     ,   0,true ,   0,  -8,   0,   0,  -3
+cow       ,   0,true ,   0,   0,   0,   0,   1
+sheep     ,   0,true ,   0,   0,   0,   0,   1
+goat      ,   0,true ,   0,   0,   0,   0,   1
+llama     ,   0,true ,   0,   0,   0,   0,   1
+pig       ,   0,true ,   0,   0,   0,   0,   1
+chicken   ,   0,true ,   0,   0,   0,   0,   1
+tuna      ,   0,true ,   0,  -8,   0,   0,   1
+salmon    ,   0,true ,   0,  -8,   0,   0,   1
+carp      ,   0,true ,   0,  -8,   0,   0,   1
+bass      ,   0,true ,   0,  -8,   0,   0,   1
