@@ -1,6 +1,6 @@
 [ISO 639-1 code of language]_[ISO 3166-1 code of region]
-Čeština (Česko)    ;.\cs_CZ.properties;..\graphic\flag\czech.republic.png
-English (UK)       ;.\en_UK.properties;..\graphic\flag\unitedkingdom.png
-English (US)       ;.\en_US.properties;..\graphic\flag\unitedstatesofamerica.png
-Español (España)   ;.\es_ES.properties;..\graphic\flag\spain.blank.png
-François (France)  ;.\fr_FR.properties;..\graphic\flag\france.png
+Čeština (Česko)    ;data\l10n_i18n\cs_CZ.properties;data\graphic\flag\czech.republic.png
+English (UK)       ;data\l10n_i18n\en_UK.properties;data\graphic\flag\unitedkingdom.png
+English (US)       ;data\l10n_i18n\en_US.properties;data\graphic\flag\unitedstatesofamerica.png
+Español (España)   ;data\l10n_i18n\es_ES.properties;data\graphic\flag\spain.blank.png
+François (France)  ;data\l10n_i18n\fr_FR.properties;data\graphic\flag\france.png
