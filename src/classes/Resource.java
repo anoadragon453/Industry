@@ -4,7 +4,11 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import integerMath.Op;
@@ -32,58 +36,9 @@ public class Resource implements Nameable {
 	public static ArrayList<ManufacturedResource> manufacturedResources = new ArrayList<ManufacturedResource>();
 	
 	static {
-		/*newNaturalResource("wheat"     ,   0,true ,   0,   0,   0,   0,   1);
-		newNaturalResource("corn"      ,   0,true ,   0,   0,   0,   0,   1);
-		newNaturalResource("rice"      ,   0,true ,   0,   0,   0,   0,   1);//Humidity of 0: it may generate on shallow water or swampy land
-		newNaturalResource("legumes"   ,   0,true ,   0,   0,   0,   0,   1);
-		newNaturalResource("soy"       ,   0,false,   0,   0,   0,   0,   1);
-		newNaturalResource("palm"      ,   0,true ,   0,   0,   0,   0,  -6);
-		newNaturalResource("ananas"    ,   0,true ,   0,   0,   0,   0,   1);
-		newNaturalResource("banana"    ,   0,true ,   0,   0,   0,   0,   1);
-		newNaturalResource("canes"     ,   0,false,   0,   0,   0,   0,  -1);//Humidity of 0: it may generate on shallow water or swampy land
-		newNaturalResource("oak"       ,   0,false,   0,   0,   0,   0,  -8);
-		newNaturalResource("rubbertree",   0,false,   0,   0,   0,   0,  -6);
-		newNaturalResource("mahogany"  ,   0,false,   0,   0,   0,   0,  -8);
-		newNaturalResource("birch"     ,   0,false,   0,   0,   0,   0,  -8);
-		newNaturalResource("eucalypt"  ,   0,false,   0,   0,   0,   0,  -8);
-		newNaturalResource("beech"     ,   0,false,   0,   0,   0,   0,  -8);
-		newNaturalResource("ash"       ,   0,false,   0,   0,   0,   0,  -8);
-		newNaturalResource("maple"     ,   0,false,   0,   0,   0,   0,  -8);
-		newNaturalResource("fir"       ,   0,false,   0,   0,   0,   0,  -8);
-		newNaturalResource("tea"       ,   0,false,   0,   0,   0,   0,   1);
-		newNaturalResource("coffee"    ,   0,false,   0,   0,   0,   0,  -2);
-		newNaturalResource("cocoa"     ,   0,false,   0,   0,   0,   0,  -4);
-		newNaturalResource("berries"   ,   0,true ,   0,   0,   0,   0,   1);
-		newNaturalResource("cacti"     ,   0,true ,   0,   0,   0,   0,  -1);
-		newNaturalResource("cabbage"   ,   0,true ,   0,   0,   0,   0,   1);
-		newNaturalResource("tubers"    ,   0,true ,   0,   0,   0,   0,   1);
-		newNaturalResource("tobacco"   ,   0,false,   0,   0,   0,   0,   1);
-		newNaturalResource("coca"      ,   0,false,   0,   0,   0,   0,   1);
-		newNaturalResource("cotton"    ,   0,false,   0,   0,   0,   0,   1);
-		newNaturalResource("flax"      ,   0,false,   0,   0,   0,   0,   1);
-		newNaturalResource("hemp"      ,   0,false,   0,   0,   0,   0,   1);
-		newNaturalResource("algae"     ,   0,true ,   0,  -8,   0,   0,  -3);//Negative landLevel - waterLevel means the water level is over land
-		newNaturalResource("cow"       ,   0,true ,   0,   0,   0,   0,   1);//Per tile, of course. Take into account that you need 100 tiles to maintain a cow.
-		newNaturalResource("sheep"     ,   0,true ,   0,   0,   0,   0,   1);
-		newNaturalResource("goat"      ,   0,true ,   0,   0,   0,   0,   1);
-		newNaturalResource("llama"     ,   0,true ,   0,   0,   0,   0,   1);
-		newNaturalResource("pig"       ,   0,true ,   0,   0,   0,   0,   1);
-		newNaturalResource("chicken"   ,   0,true ,   0,   0,   0,   0,   1);
-		newNaturalResource("tuna"      ,   0,true ,   0,  -8,   0,   0,   1);//Negative landLevel - waterLevel means the water level is over land
-		newNaturalResource("salmon"    ,   0,true ,   0,  -8,   0,   0,   1);//Negative landLevel - waterLevel means the water level is over land
-		newNaturalResource("carp"      ,   0,true ,   0,  -8,   0,   0,   1);//Negative landLevel - waterLevel means the water level is over land
-		newNaturalResource("bass"      ,   0,true ,   0,  -8,   0,   0,   1);//Negative landLevel - waterLevel means the water level is over land
-		newSoilResource("limestone",   0,   0,  -8);
-		newSoilResource("sand"     ,   0,   4,  -4);
-		newSoilResource("silt"     ,   0,   8,   2);
-		newSoilResource("clay"     ,   0,  16,   0);
-		newSoilResource("peat"     ,   0,  32,   4);*/
-		
 		try {
-			FileInputStream fis = new FileInputStream("data\\resources.csv");
-			BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
-			String line = reader.readLine();
-			while(line != null) {
+			String naturalresources = new String(Files.readAllBytes(Paths.get("data\\resources.natural.csv")), StandardCharsets.UTF_8);
+			for(String line : naturalresources.split("\n")) {
 				String[] values = line.split(",");
 				newNaturalResource(
 						values[0].trim(),
@@ -95,14 +50,35 @@ public class Resource implements Nameable {
 						Integer.parseInt(values[6].trim()),
 						Integer.parseInt(values[7].trim())
 						);
-				line = reader.readLine();
+			}
+			String soilresources = new String(Files.readAllBytes(Paths.get("data\\resources.soil.csv")), StandardCharsets.UTF_8);
+			for(String line : soilresources.split("\n")) {
+				String[] values = line.split(",");
+				newSoilResource(
+						values[0].trim(),
+						Integer.parseInt(values[1].trim()),
+						Integer.parseInt(values[2].trim()),
+						Integer.parseInt(values[3].trim())
+						);
+			}
+			String mineralresources = new String(Files.readAllBytes(Paths.get("data\\resources.mineral.csv")), StandardCharsets.UTF_8);
+			for(String line : mineralresources.split("\n")) {
+				String[] values = line.split(",");
+				newMineralResource(
+						values[0].trim(),
+						Integer.parseInt(values[1].trim()),
+						values[2].trim().startsWith("t")
+						);
+			}
+			String manufacturedresources = new String(Files.readAllBytes(Paths.get("data\\resources.manufactured.csv")), StandardCharsets.UTF_8);
+			for(String line : manufacturedresources.split("\n")) {
+				String[] values = line.split(",");
+				newManufacturedResource(
+						values[0].trim(),
+						values[2].trim().startsWith("t")
+						);
 			}
 		} catch(Throwable t) {
-			Path path1 = new File("C:\\Users\\Javier\\Desktop\\cosas\\Pending\\industry\\Workspace\\Industry\\bin\\classes\\Resource.class").toPath();
-			Path path2 = new File("C:\\Users\\Javier\\Desktop\\cosas\\Pending\\industry\\Workspace\\Industry\\data\\resources.csv").toPath();
-			Path relpath = path1.relativize(path2);
-			
-			System.out.println(relpath.toString());
 			t.printStackTrace();
 		}
 	}
