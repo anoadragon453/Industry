@@ -43,7 +43,7 @@ public class Resource implements Nameable {
 				newNaturalResource(
 						values[0].trim(),
 						Integer.parseInt(values[1].trim()),
-						values[2].trim().startsWith("t"),
+						values[2].trim().equals("t"),
 						Integer.parseInt(values[3].trim()),
 						Integer.parseInt(values[4].trim()),
 						Integer.parseInt(values[5].trim()),
@@ -67,7 +67,7 @@ public class Resource implements Nameable {
 				newMineralResource(
 						values[0].trim(),
 						Integer.parseInt(values[1].trim()),
-						values[2].trim().startsWith("t")
+						values[2].trim().equals("t")
 						);
 			}
 			String manufacturedresources = new String(Files.readAllBytes(Paths.get("data\\resources.manufactured.csv")), StandardCharsets.UTF_8);
@@ -75,11 +75,17 @@ public class Resource implements Nameable {
 				String[] values = line.split(",");
 				newManufacturedResource(
 						values[0].trim(),
-						values[2].trim().startsWith("t")
+						values[2].trim().equals("t")
 						);
 			}
 		} catch(Throwable t) {
 			t.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		for(Resource r : naturalResources) {
+			System.out.println(r.getType());
 		}
 	}
 	
