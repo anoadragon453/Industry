@@ -16,6 +16,3 @@ v0.0
 
 Javier Centeno Vega <<jacenve@telefonica.net>> - Programmer and designer
 
-## Refer to the wiki for further info
-
-[Wiki](docs/wiki.md)
