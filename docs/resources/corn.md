@@ -2,4 +2,4 @@
 
 [Back to wiki](../wiki.md)
 
-![corn](../../graphic/resource/corn.32.png)
+![corn](../../../data/graphic/resource/corn.32.png)
