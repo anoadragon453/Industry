@@ -34,50 +34,58 @@ public class Resource implements Nameable {
 			String naturalresources = new String(Files.readAllBytes(Paths.get("data\\resources.natural.csv")), StandardCharsets.UTF_8);
 			if(!naturalresources.isEmpty()) {
 				for(String line : naturalresources.split("\n")) {
-					String[] values = line.split(",");
-					newNaturalResource(
-							values[0].trim(),
-							Integer.parseInt(values[1].trim()),
-							values[2].trim().equals("t"),
-							Integer.parseInt(values[3].trim()),
-							Integer.parseInt(values[4].trim()),
-							Integer.parseInt(values[5].trim()),
-							Integer.parseInt(values[6].trim()),
-							Integer.parseInt(values[7].trim())
-							);
+					if(line.charAt(0) != '#') {
+						String[] values = line.split(",");
+						newNaturalResource(
+								values[0].trim(),
+								Integer.parseInt(values[1].trim()),
+								values[2].trim().equals("t"),
+								Integer.parseInt(values[3].trim()),
+								Integer.parseInt(values[4].trim()),
+								Integer.parseInt(values[5].trim()),
+								Integer.parseInt(values[6].trim()),
+								Integer.parseInt(values[7].trim())
+								);
+					}
 				}
 			}
 			String soilresources = new String(Files.readAllBytes(Paths.get("data\\resources.soil.csv")), StandardCharsets.UTF_8);
 			if(!soilresources.isEmpty()) {
 				for(String line : soilresources.split("\n")) {
-					String[] values = line.split(",");
-					newSoilResource(
-							values[0].trim(),
-							Integer.parseInt(values[1].trim()),
-							Integer.parseInt(values[2].trim()),
-							Integer.parseInt(values[3].trim())
-							);
+					if(line.charAt(0) != '#') {
+						String[] values = line.split(",");
+						newSoilResource(
+								values[0].trim(),
+								Integer.parseInt(values[1].trim()),
+								Integer.parseInt(values[2].trim()),
+								Integer.parseInt(values[3].trim())
+								);
+					}
 				}
 			}
 			String mineralresources = new String(Files.readAllBytes(Paths.get("data\\resources.mineral.csv")), StandardCharsets.UTF_8);
 			if(!mineralresources.isEmpty()) {
 				for(String line : mineralresources.split("\n")) {
-					String[] values = line.split(",");
-					newMineralResource(
-							values[0].trim(),
-							Integer.parseInt(values[1].trim()),
-							values[2].trim().equals("t")
-							);
+					if(line.charAt(0) != '#') {
+						String[] values = line.split(",");
+						newMineralResource(
+								values[0].trim(),
+								Integer.parseInt(values[1].trim()),
+								values[2].trim().equals("t")
+								);
+					}
 				}
 			}
 			String manufacturedresources = new String(Files.readAllBytes(Paths.get("data\\resources.manufactured.csv")), StandardCharsets.UTF_8);
 			if(!manufacturedresources.isEmpty()) {
 				for(String line : manufacturedresources.split("\n")) {
-					String[] values = line.split(",");
-					newManufacturedResource(
-							values[0].trim(),
-							values[2].trim().equals("t")
-							);
+					if(line.charAt(0) != '#') {
+						String[] values = line.split(",");
+						newManufacturedResource(
+								values[0].trim(),
+								values[2].trim().equals("t")
+								);
+					}
 				}
 			}
 		} catch(Throwable t) {
