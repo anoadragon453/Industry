@@ -1,13 +1,5 @@
-```
-|     | |  \  | | |    \   | |   | |  /    | |       | |    \   \ \  / /
-  | |   | \ \ | | | | \ \  | |   | | | |        | |    | | \ \   \ \/ /
-  | |   | |\ \| | | |  | | | |   | |  \   \     | |    | | / /    \  /
-  | |   | | \ \ | | | / /  | |   | |     | |    | |    |     \    / /
-|     | | |  \  | |    /    \     /  |    /     | |    | |  \ \  / /
+# Industry
 
-v0.0
-(c) 2017 - GNU general public license
-Javier Centeno Vega <jacenve@telefonica.net> - Programmer and designer
-```
+This project is licensed under a GNU general public license.
 
-This project is an strategic game of city building and resource management.
+It is an strategic game of city building and resource management.
