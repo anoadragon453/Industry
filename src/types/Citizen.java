@@ -91,12 +91,15 @@ public class Citizen implements Nameable, Serializable {
 	 */
 	public int deathDate;
 	/**
-	 * Indicates the physical properties of this citizen:
-	 * ----0000 : sickness
-	 * -000---- : pregnancy state
+	 * Information about this citizen's sex:
+	 * -0000000 : pregnancy state
 	 * 0------- : sex
 	 */
-	public byte constitution;
+	public byte sex;
+	/**
+	 * ID of the sickness affecting this citizen, -1 if none.
+	 */
+	public byte sickness;
 	/**
 	 * Indicates the state of the needs of this citizen:
 	 * needs[0] : health
@@ -211,50 +214,36 @@ public class Citizen implements Nameable, Serializable {
 		offspring = temp;
 	}
 	
-	public boolean isSick() {
-		return (constitution & 0b00001111) == 0;
-	}
-	
-	public int getSickness() {
-		return constitution & 0b00001111;
-	}
-	
 	public String getSicknessType() {
-		return isSick() ? "sickness.healthy" : "sickness." + sicknesses[getSickness()].type;
+		return sickness < 0 ? "sickness.healthy" : "sickness." + sicknesses[sickness].type;
 	}
 	
 	public void setSickness(byte sickness) {
-		if(!isSick()){
-			constitution += sickness;
-		}
-	}
-	
-	public void setSicknessHealthy() {
-		constitution &= 0b11110000;
+		this.sickness = sickness;
 	}
 	
 	/**
 	 * Returns the state of the citizen's pregnancy in months pregnant.
 	 */
 	public int getPregnancyState() {
-		return constitution & 0b01110000;
+		return sex & 0b01111111;
 	}
 	
 	/**
-	 * If female and not pregnant yet, it makes the citizen 1 month pregnant.
+	 * If female and not pregnant, it makes the citizen pregnant.
 	 */
 	public void makePregnant() {
-		if((constitution & 0b11110000) == 0) {//if female (0b0---) and non pregnant (0b-000)
-			constitution += 0b00010000;//set to 1 month pregnant
+		if(sex == 0) {//if female (0b0---) and non pregnant (0b-000)
+			sex = 1;//set to pregnant
 		}
 	}
 	
 	public boolean isFemale() {
-		return constitution >= 0;
+		return sex >= 0;
 	}
 	
 	public boolean isMale() {
-		return constitution < 0;
+		return sex < 0;
 	}
 	
 	public int getOpinionOnPlayer(Player player) {
@@ -272,7 +261,7 @@ public class Citizen implements Nameable, Serializable {
 	}
 	
 	public void tick() {
-		if(isSick()) {
+		if(sickness >= 0) {
 			for(Citizen citizen : home.getCitizens()) {
 				/* 
 				 * TODO: For every citizen, there's a likelihood equivalent to the sickness's infectivity to set them to the same sickness.
@@ -284,9 +273,9 @@ public class Citizen implements Nameable, Serializable {
 				 */
 			}
 			//reduce health
-			needs[0] -= sicknesses[getSickness()].lethality;
+			needs[0] -= sicknesses[sickness].lethality;
 			//Sicknesses only last for a month. If a citizen is sick, the sickness is unset automatically as part of the tick.
-			setSicknessHealthy();
+			setSickness((byte) -1);
 		}
 		
 		/*
@@ -298,6 +287,15 @@ public class Citizen implements Nameable, Serializable {
 		
 		if(needs[0] <= 0) {
 			//TODO: kill
+		}
+		
+		if(sex > 0) {//is female and pregnant
+			if(sex >= 10) {//pregnancy has been going on for 10 months or more
+				//TODO: BIRTH
+				sex = 0;
+			} else {
+				++sex;
+			}
 		}
 	}
 	
