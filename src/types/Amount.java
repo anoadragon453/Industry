@@ -15,8 +15,21 @@ public class Amount implements Serializable {
 	
 	// Class fields --------------------------------
 	
+	/**
+	 * Amount of units of this resource this amount contains.
+	 */
 	int amount;
+	/**
+	 * Type of resource this amount contains.
+	 * 0 : natural
+	 * 1 : soil
+	 * 2 : mineral
+	 * 3 : manufactured
+	 */
 	byte type;
+	/**
+	 * Index of the resource within the list.
+	 */
 	byte index;
 	
 	// Constructor --------------------------------
