@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import classes.World;
+import types.World;
 
 public class TestDriver_1 {
 	
@@ -50,8 +50,8 @@ public class TestDriver_1 {
 				1,//minTectonicPlateInfluence, "continental cohesion level"
 				16,//crustThickness
 				false, false,//cycle
-				32, 32,//Starting plates
-				32, 32, 100,//x, y, z
+				32, 64,//Starting plates
+				32, 64, 100,//x, y, z
 				16, 16, (byte) 10,//mid_x, mid_y, mid_z
 				32,//temperatureAtEquator
 				-64,//temperatureDifference
