@@ -16,76 +16,106 @@ public class Amount implements Serializable {
 	// Class fields --------------------------------
 	
 	/**
-	 * Amount of units of this resource this amount contains.
+	 * Quantity of units of this resource this amount contains.
 	 */
-	int amount;
-	/**
-	 * Type of resource this amount contains.
-	 * 0 : natural
-	 * 1 : soil
-	 * 2 : mineral
-	 * 3 : manufactured
-	 */
-	byte type;
+	short quantity;
 	/**
 	 * Index of the resource within the list.
 	 */
-	byte index;
+	short index;
 	
 	// Constructor --------------------------------
 	
-	public Amount(int amount, byte type, byte index) {
-		this.amount = amount;
-		this.type = type;
+	/**
+	 * Creates a new, empty amount of the resource with the specified index in the global list of resources.
+	 * @param index
+	 */
+	public Amount(short index) {
+		this.quantity = 0;
 		this.index = index;
 	}
 	
-	public Amount(int amount, Resource resource) {
-		this.amount = amount;
+	/**
+	 * Creates a new, empty amount of the specified resource.
+	 * @param resource
+	 */
+	public Amount(Resource resource) {
+		this.quantity = 0;
 		int index = Resource.naturalResources.indexOf(resource);
-		int type;
-		if(index < 0) {
-			index = Resource.soilResources.indexOf(resource);
-			if(index < 0) {
-				index = Resource.mineralResources.indexOf(resource);
-				if(index < 0) {
-					index = Resource.manufacturedResources.indexOf(resource);
-					if(index < 0) {
-						type = -1;
-					} else {
-						type = 3;
-					}
-				} else {
-					type = 2;
-				}
-			} else {
-				type = 1;
-			}
-		} else {
-			type = 0;
-		}
-		this.type = (byte) type;
-		this.index = (byte) index;
+		this.index = (short) index;
 	}
 	
-	public int getAmount() {
-		return amount;
+	// Methods --------------------------------
+	
+	public int getQuantity() {
+		return quantity;
+	}
+	
+	public int getIndex() {
+		return index;
 	}
 	
 	public Resource getResource() {
-		if(type == 0) {
-			return Resource.naturalResources.get(index);
+		return Resource.naturalResources.get(index);
+	}
+	
+	/**
+	 * Attempts to retrieve a certain amount of resource from this Amount and returns a new Amount with the retrieved amount of the resource.
+	 * @param amount Amount to be retrieved.
+	 * @return A new Amount containing the amount of resource retrieved from the current amount or the whole amount if attempted to retrieve more than there is.
+	 */
+	public Amount fork(short quantity) {
+		if(this.quantity <= quantity) {
+			Amount ret = new Amount(index);
+			ret.quantity = this.quantity;
+			this.quantity = 0;
+			return ret;
+		} else {
+			Amount ret = new Amount(index);
+			this.quantity -= quantity;
+			ret.quantity = quantity;
+			return ret;
 		}
-		if(type == 1) {
-			return Resource.soilResources.get(index);
+	}
+	
+	/**
+	 * Attempts to move a determined quantity of resources between two amounts until the minimum or maximum non negative values are reached on either side.
+	 * @param amount Amount to be piled together with this one.
+	 * @param quantity Quantity that will be attempted to be moved, the sign indicates the direction of the movement (positive, towards THIS; negative, out of THIS).
+	 * @return True if the operation was successful, false if there was a mismatch between resource types.
+	 */
+	public boolean pile(Amount amount, short quantity) {
+		if(this.index == amount.index) {
+			this.quantity += quantity;
+			amount.quantity -= quantity;
+			//If quantity results to be less than 0, we pass 
+			if(this.quantity < 0) {
+				if(quantity > 0) {//If positive + positive = negative, there's been an overflow
+					amount.quantity = (short) (amount.quantity + this.quantity - 0x7FFF);
+					this.quantity = 0x7FFF;//Maximum positive value for signed short, change if the type of primitive changes.
+				} else {//If there isn't an overflow, we just return the amount necessary for neither to be negative
+					amount.quantity = (short) (amount.quantity + this.quantity);
+					this.quantity = 0;
+				}
+			}
+			
+			if(amount.quantity < 0) {
+				if(quantity < 0) {//If positive + positive = negative, there's been an overflow
+					this.quantity = (short) (this.quantity + amount.quantity - 0x7FFF);
+					amount.quantity = 0x7FFF;//Maximum positive value for signed short, change if the type of primitive changes.
+				} else {//If there isn't an overflow, we just return the amount necessary for neither to be negative
+					this.quantity = (short) (this.quantity + amount.quantity);
+					amount.quantity = 0;
+				}
+			}
+			
+			return true;
 		}
-		if(type == 2) {
-			return Resource.mineralResources.get(index);
-		}
-		if(type == 3) {
-			return Resource.manufacturedResources.get(index);
-		}
-		return null;
+		return false;
+	}
+	
+	public void setQuantity_TEST(short q) {
+		this.quantity = q;
 	}
 	
 }
