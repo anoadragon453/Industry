@@ -17,16 +17,44 @@ public class Resource implements Nameable {
 	// Static fields --------------------------------
 	
 	/**
-	 * 
+	 * String identifying the type of object this is for name lookups.
 	 */
 	public static final String type = "resource";
+	/**
+	 * Global list of all resources loaded from the resource list files.
+	 */
+	public static ArrayList<Resource> resources = new ArrayList<Resource>();
+	/**
+	 * Global list of all natural resources loaded from the natural resource list file.
+	 */
 	public static ArrayList<NaturalResource> naturalResources = new ArrayList<NaturalResource>();
+	/**
+	 * Rarity accumulator used as the maximum random number for a context sensitive roulette wheel selection without looping.
+	 */
 	public static int naturalResourcesRarity = 0;
+	/**
+	 * Maximum versatility of all natural resources, updated whenever a resource with bigger versatility is added and used for random choosing.
+	 */
 	public static int naturalResourcesMaxVersatility = 0;
+	/**
+	 * Global list of all soil resources loaded from the soil resource list file.
+	 */
 	public static ArrayList<SoilResource> soilResources = new ArrayList<SoilResource>();
+	/**
+	 * Rarity accumulator used as the maximum random number for a context sensitive roulette wheel selection without looping.
+	 */
 	public static int soilResourcesRarity = 0;
+	/**
+	 * Global list of all mineral resources loaded from the mineral resource list file.
+	 */
 	public static ArrayList<MineralResource> mineralResources = new ArrayList<MineralResource>();
+	/**
+	 * Rarity accumulator used as the maximum random number for a context sensitive roulette wheel selection without looping.
+	 */
 	public static int mineralResourcesRarity = 0;
+	/**
+	 * Global list of all manufactured resources loaded from the manufactured resource list file.
+	 */
 	public static ArrayList<ManufacturedResource> manufacturedResources = new ArrayList<ManufacturedResource>();
 	
 	static {
@@ -104,7 +132,9 @@ public class Resource implements Nameable {
 	}
 	
 	public static void newNaturalResource(String type, int rarity, boolean edible, int optimalTemperature, int optimalHumidity, int versatility, int yield, int pollutionImpact) {
-		naturalResources.add(new NaturalResource(type, rarity, edible, optimalTemperature, optimalHumidity, versatility, yield, pollutionImpact));
+		NaturalResource resource = new NaturalResource(type, rarity, edible, optimalTemperature, optimalHumidity, versatility, yield, pollutionImpact);
+		resources.add(resource);
+		naturalResources.add(resource);
 		naturalResourcesRarity += rarity;
 		if(naturalResourcesMaxVersatility < versatility) {
 			naturalResourcesMaxVersatility = versatility;
@@ -112,17 +142,23 @@ public class Resource implements Nameable {
 	}
 	
 	public static void newSoilResource(String type, int rarity, int typicalHumidity, int fertility) {
-		soilResources.add(new SoilResource(type, rarity, typicalHumidity, fertility));
+		SoilResource resource = new SoilResource(type, rarity, typicalHumidity, fertility);
+		resources.add(resource);
+		soilResources.add(resource);
 		soilResourcesRarity += rarity;
 	}
 	
 	public static void newMineralResource(String type, int rarity, boolean solid) {
-		mineralResources.add(new MineralResource(type, rarity, solid));
+		MineralResource resource = new MineralResource(type, rarity, solid);
+		resources.add(resource);
+		mineralResources.add(resource);
 		mineralResourcesRarity += rarity;
 	}
 	
 	public static void newManufacturedResource(String type, boolean luxury) {
-		manufacturedResources.add(new ManufacturedResource(type, luxury));
+		ManufacturedResource resource = new ManufacturedResource(type, luxury);
+		resources.add(resource);
+		manufacturedResources.add(resource);
 	}
 	
 	// Object methods --------------------------------
