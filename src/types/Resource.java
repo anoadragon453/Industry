@@ -170,7 +170,7 @@ public class Resource implements Nameable {
 	}
 	
 	@Override public int hashCode(){
-		return this.getType().hashCode() >>> 24 ^ this.getType().hashCode() >>> 16 ^ this.getType().hashCode() >>> 8 ^ this.getType().hashCode();
+		return this.getType().hashCode();
 	}
 	
 	@Override public boolean equals(Object object) {
