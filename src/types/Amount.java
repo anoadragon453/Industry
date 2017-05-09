@@ -88,7 +88,7 @@ public class Amount implements Serializable {
 		if(this.index == amount.index) {
 			this.quantity += quantity;
 			amount.quantity -= quantity;
-			//If quantity results to be less than 0, we pass 
+			//If quantity results to be less than 0, we move amounts back so both are non negative.
 			if(this.quantity < 0) {
 				if(quantity > 0) {//If positive + positive = negative, there's been an overflow
 					amount.quantity = (short) (amount.quantity + this.quantity - 0x7FFF);
@@ -98,7 +98,7 @@ public class Amount implements Serializable {
 					this.quantity = 0;
 				}
 			}
-			
+			//If quantity results to be less than 0, we move amounts back so both are non negative.
 			if(amount.quantity < 0) {
 				if(quantity < 0) {//If positive + positive = negative, there's been an overflow
 					this.quantity = (short) (this.quantity + amount.quantity - 0x7FFF);
