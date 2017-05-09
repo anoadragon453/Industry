@@ -108,14 +108,9 @@ public class Amount implements Serializable {
 					amount.quantity = 0;
 				}
 			}
-			
 			return true;
 		}
 		return false;
-	}
-	
-	public void setQuantity_TEST(short q) {
-		this.quantity = q;
 	}
 	
 }
