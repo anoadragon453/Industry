@@ -6,9 +6,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInput;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
+import java.io.Externalizable;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -17,7 +19,7 @@ import java.util.LinkedList;
  * @version	0.0
  * @since	0.0
  */
-public class World implements Serializable {
+public class World implements Externalizable {
 	/**
 	 * Terms used in this code
 	 * 
@@ -864,6 +866,20 @@ public class World implements Serializable {
 	}
 	
 	// File and memory functions --------------------------------
+	
+	@Override
+	public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public void writeExternal(ObjectOutput out) throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	//TODO: Only really needs functions above, move functions under to some other class.
 	
 	public void save() {
 		try {

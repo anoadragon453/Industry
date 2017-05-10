@@ -1,13 +1,13 @@
 package types;
 
-import java.io.Serializable;
+import java.io.Externalizable;
 
 /**
  * This class abstracts the idea of element that can be owned by a player, located in a map and damaged or destroyed.
  * @author Javier
  *
  */
-public abstract class Element implements Nameable, Serializable {
+public abstract class Element implements Nameable, Externalizable {
 	
 	// Static fields --------------------------------
 	

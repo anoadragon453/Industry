@@ -1,19 +1,27 @@
 package types;
 
-import java.io.Serializable;
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
 
 /**
  * This class represents a certain quantity of a certain resource as a value to represent each of them. It also offers methods to represent these objects as a primitive to avoid object overhead.
  * @author Javier
  *
  */
-public class Amount implements Serializable {
+public class Amount implements Externalizable {
 	
 	// Static fields --------------------------------
 	
 	private static final long serialVersionUID = 8091085314536647783L;
 	
 	// Class fields --------------------------------
+	
+	/*
+	 * TODO:
+	 * MAYBE CHANGE IT TO SHORT[]
+	 */
 	
 	/**
 	 * Index of the resource within the list.
@@ -189,6 +197,18 @@ public class Amount implements Serializable {
 			return true;
 		}
 		return false;
+	}
+
+	@Override
+	public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void writeExternal(ObjectOutput out) throws IOException {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

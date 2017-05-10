@@ -1,8 +1,11 @@
 package types;
 
-import java.io.Serializable;
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
 
-public class Player implements Serializable {
+public class Player implements Externalizable {
 	
 	// Static fields --------------------------------
 	
@@ -32,6 +35,18 @@ public class Player implements Serializable {
 		this.name = name;
 		this.countryName = countryName;
 		this.ideology = new byte[4];
+	}
+
+	@Override
+	public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void writeExternal(ObjectOutput out) throws IOException {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

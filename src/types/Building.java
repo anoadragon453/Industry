@@ -1,7 +1,5 @@
 package types;
 
-import java.util.ArrayList;
-
 public abstract class Building extends Element {
 	
 	// Static --------------------------------

@@ -1,6 +1,9 @@
 package types;
 
-import java.io.Serializable;
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -8,7 +11,7 @@ import java.util.ListIterator;
 
 import types.Amount;
 
-public class TectonicPlate implements Serializable {
+public class TectonicPlate implements Externalizable {
 	
 	// Static fields --------------------------------
 	
@@ -159,6 +162,18 @@ public class TectonicPlate implements Serializable {
 			this.elementsForeignList = update;
 		}
 		elementsIn[subindex_tile_y][subindex_tile_x] = (short) (Short.MIN_VALUE + elementsForeignList.length - 1);
+	}
+
+	@Override
+	public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void writeExternal(ObjectOutput out) throws IOException {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
