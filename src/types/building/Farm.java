@@ -26,7 +26,7 @@ public class Farm extends Building {
 	
 	public boolean irrigation;//humidity will always be optimal, but consumes water
 	public boolean greenhouses;//temperature will always be optimal, produces constantly instead of just at harvest months
-	public boolean fertilizer;//consumes fertilizer, reduces pollution and increases production
+	public boolean fertilizer;//soil quality will always be optimal and reduces pollution but consumes fertilizer
 	
 	// Class fields --------------------------------
 	
@@ -102,7 +102,7 @@ public class Farm extends Building {
 				+ versatility of resource
 				- absolute difference between temperature and optimal temperature, or 0 if greenhouses is on
 				- absolute difference between humidity and optimal humidity, or 0 if irrigation is on and there's water to maintain the crop
-				+ fertility of soil resource
+				+ fertility of soil resource, optimal if fertilizer is on
 				
 				divide by 12 and add one if greenhouses is on
 			*/
