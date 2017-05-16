@@ -121,9 +121,9 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	 */
 	public byte[] posessions;
 	/**
-	 * ID of the player whose civilization this citizen belongs to
+	 * Country this citizen is from
 	 */
-	public Player owner;
+	public Country country;
 	
 	// Constructors --------------------------------
 	
@@ -135,7 +135,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	 * @param birthDate
 	 * @param owner
 	 */
-	public Citizen(Building home, Citizen father, Citizen mother, int birthDate, Player owner) {
+	public Citizen(Building home, Citizen father, Citizen mother, int birthDate, Country country) {
 		this.home = home;
 		this.workplace = null;
 		(this.father = father).addChild(this);
@@ -147,7 +147,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 		//TODO: calculate happiness
 		//TODO: calculate ideology
 		//TODO: initialize other fields
-		this.owner = owner;
+		this.country = country;
 	}
 	
 	// Object methods --------------------------------
@@ -158,12 +158,12 @@ public class Citizen implements ProperlyNameable, Externalizable {
 				"F" + String.format("%11d", birthDate) +
 				"@" + String.format("%11d", home) +
 				"," + String.format("%11d", workplace) +
-				"~" + String.format("%11d", owner) +
+				"~" + String.format("%11d", country) +
 				"]";
 	}
 	
 	@Override public int hashCode() {
-		return birthDate + owner.hashCode()*31;
+		return birthDate + country.hashCode()*31;
 	}
 	
 	@Override public boolean equals(Object object) {
@@ -172,7 +172,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 					this.father == ((Citizen)object).father &&
 					this.mother == ((Citizen)object).mother &&
 					this.birthDate == ((Citizen)object).birthDate &&
-					this.owner == ((Citizen)object).owner;
+					this.country == ((Citizen)object).country;
 		}
 		return false;
 	}

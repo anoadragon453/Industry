@@ -5,34 +5,31 @@ import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
 
-public class Player extends Citizen {
+public class Country implements ProperlyNameable, Externalizable {
 	
 	// Static fields --------------------------------
 	
-	
+	public static final String type = "country";
 	
 	// Class fields --------------------------------
-
 	
+	public String name;
 	
 	// Constructors --------------------------------
 	
-	public Player(World world, String name, String countryName, byte[] ideology) {
-		//initialize a new country
-		
-		//create its basic buildings
-		
-		/*
-		 * construct a citizen with
-		 * 		null, null as parents and
-		 * 		the palace as house and workplace
-		 * 		the new country as country
-		 * 		a specified ideology as ideology
-		 * 		type being whatever type stands for "chairman" or "state ruler" or whatever
-		 */
+	public Country(String name) {
+		this.name = name;
 	}
 	
 	// Methods --------------------------------
+	
+	public String getType() {
+		return type;
+	}
+	
+	public String getProperName() {
+		return name;
+	}
 	
 	@Override public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
 		// TODO
