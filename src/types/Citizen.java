@@ -169,10 +169,8 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	@Override public boolean equals(Object object) {
 		if(object instanceof Citizen) {
 			return
-					this.father == ((Citizen)object).father &&
 					this.mother == ((Citizen)object).mother &&
-					this.birthDate == ((Citizen)object).birthDate &&
-					this.country == ((Citizen)object).country;
+					this.birthDate == ((Citizen)object).birthDate;
 		}
 		return false;
 	}
