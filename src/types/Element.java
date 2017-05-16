@@ -28,17 +28,17 @@ public abstract class Element implements Nameable, Externalizable {
 	 */
 	public int maxHealth;
 	/**
-	 * Player whose civilization this element belongs to.
+	 * Country this element belongs to.
 	 */
-	public Player owner;
+	public Country country;
 	
 	// Constructors --------------------------------
 	
-	public Element(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Player owner) {
+	public Element(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Country country) {
 		this.coordinate_tile_x = coordinate_tile_x;
 		this.coordinate_tile_y = coordinate_tile_y;
 		this.orientation = orientation;
-		this.owner = owner;
+		this.country = country;
 	}
 	
 	// Methods --------------------------------

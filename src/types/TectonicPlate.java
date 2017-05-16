@@ -24,12 +24,12 @@ public class TectonicPlate implements ProperlyNameable, Externalizable {
 	 */
 	public String name;
 	/**
-	 * ID of the player that owns this tectonic plate ("province"). -1 if it hasn't been claimed yet.
+	 * Country this tectonic plate ("province") belongs to. -1 if it hasn't been claimed yet.
 	 * Players can make territorial claims of plates that aren't owned or other players own.
 	 * If no one else claims them, they belong to the player who claimed them.
 	 * Upon conflict, treaties or wars can be made.
 	 */
-	public Player owner;
+	public Country country;
 	/**
 	 * Can lock tectonic plates to put them in quarantine. Quarantine has to be enforced by security. It can be breached by units or civilians.
 	 */
@@ -68,9 +68,9 @@ public class TectonicPlate implements ProperlyNameable, Externalizable {
 	
 	// Constructors --------------------------------
 	
-	public TectonicPlate(Player owner, int tectonicPlateSize) {
+	public TectonicPlate(Country country, int tectonicPlateSize) {
 		this.name		= "";
-		this.owner		= owner;
+		this.country	= country;
 		this.unlocked	= true;
 		//geology
 		this.magma					= new byte		[tectonicPlateSize][tectonicPlateSize];

@@ -25,8 +25,8 @@ public abstract class Knot extends Element {
 	
 	// Constructors --------------------------------
 	
-	public Knot(int coordinate_tile_x, int coordinate_tile_y, int coordinate_tile_z, byte orientation, Player owner) {
-		super(coordinate_tile_x, coordinate_tile_y, orientation, owner);
+	public Knot(int coordinate_tile_x, int coordinate_tile_y, int coordinate_tile_z, byte orientation, Country country) {
+		super(coordinate_tile_x, coordinate_tile_y, orientation, country);
 		this.coordinate_tile_z = coordinate_tile_z;
 		this.health = 1;
 		this.unlocked = true;
@@ -42,7 +42,7 @@ public abstract class Knot extends Element {
 				"," + String.format("%11d", coordinate_tile_y) +
 				"," + String.format("%11d", coordinate_tile_z) +
 				";" + String.format("%4d", orientation) +
-				"~" + String.format("%11d", owner) +
+				"~" + String.format("%11d", country) +
 				"]";
 	}
 	
@@ -52,7 +52,7 @@ public abstract class Knot extends Element {
 				coordinate_tile_x*31 +
 				coordinate_tile_y*961 +
 				coordinate_tile_z*29791 +
-				owner.hashCode()*923521;
+				country.hashCode()*923521;
 	}
 	
 	@Override public boolean equals(Object object) {
@@ -62,7 +62,7 @@ public abstract class Knot extends Element {
 					coordinate_tile_x == ((Knot)object).coordinate_tile_x &&
 					coordinate_tile_y == ((Knot)object).coordinate_tile_y &&
 					coordinate_tile_z == ((Knot)object).coordinate_tile_z &&
-					owner == ((Knot)object).owner;
+					country == ((Knot)object).country;
 		}
 		return false;
 	}

@@ -9,14 +9,14 @@ public class Trade implements Externalizable {
 	
 	// Class fields --------------------------------
 	
-	public Player seller;
-	public Player buyer;
+	public Country seller;
+	public Country buyer;
 	public Amount[] amounts;
 	public int monthsRemaining;
 	
 	// Constructors --------------------------------
 	
-	public Trade(Player seller, Player buyer, Amount[] amounts, int duration) {
+	public Trade(Country seller, Country buyer, Amount[] amounts, int duration) {
 		this.seller = seller;
 		this.buyer = buyer;
 		this.amounts = amounts;

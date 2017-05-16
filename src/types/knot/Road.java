@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
 
+import types.Country;
 import types.Knot;
-import types.Player;
 
 public class Road extends Knot {
 	
@@ -19,8 +19,8 @@ public class Road extends Knot {
 	
 	// Constructor --------------------------------
 	
-	public Road(int coordinate_tile_x, int coordinate_tile_y, int coordinate_tile_z, byte orientation, Player owner) {
-		super(coordinate_tile_x, coordinate_tile_y, coordinate_tile_z, orientation, owner);
+	public Road(int coordinate_tile_x, int coordinate_tile_y, int coordinate_tile_z, byte orientation, Country country) {
+		super(coordinate_tile_x, coordinate_tile_y, coordinate_tile_z, orientation, country);
 	}
 	
 	// Methods --------------------------------

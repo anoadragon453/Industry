@@ -8,8 +8,8 @@ public abstract class Unit extends Element {
 	
 	// Constructors --------------------------------
 	
-	public Unit(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Player owner) {
-		super(coordinate_tile_x, coordinate_tile_y, orientation, owner);
+	public Unit(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Country country) {
+		super(coordinate_tile_x, coordinate_tile_y, orientation, country);
 	}
 	
 	// Getters and general methods --------------------------------
@@ -19,7 +19,7 @@ public abstract class Unit extends Element {
 				"[" + this.getType() +
 				"@" + String.format("%11d", coordinate_tile_x) +
 				"," + String.format("%11d", coordinate_tile_y) +
-				"~" + String.format("%11d", owner) +
+				"~" + String.format("%11d", country) +
 				"]";
 	}
 	
@@ -27,7 +27,7 @@ public abstract class Unit extends Element {
 		return
 				this.getType().hashCode() +
 				maxHealth*31 +
-				owner.hashCode()*961;
+				country.hashCode()*961;
 	}
 	
 	@Override public boolean equals(Object object) {
@@ -35,7 +35,7 @@ public abstract class Unit extends Element {
 			return
 					this.getType() == ((Unit)object).getType() &&
 					maxHealth == ((Unit)object).maxHealth &&
-					owner == ((Unit)object).owner;
+					country == ((Unit)object).country;
 		}
 		return false;
 	}
