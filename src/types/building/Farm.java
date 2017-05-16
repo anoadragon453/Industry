@@ -6,7 +6,7 @@ import java.io.ObjectOutput;
 
 import types.Building;
 import types.Citizen;
-import types.Player;
+import types.Country;
 import types.Resource;
 import types.World;
 
@@ -48,8 +48,8 @@ public class Farm extends Building {
 	
 	// Constructor --------------------------------
 	
-	public Farm(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Player owner) {
-		super(coordinate_tile_x, coordinate_tile_y, orientation, owner);
+	public Farm(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Country country) {
+		super(coordinate_tile_x, coordinate_tile_y, orientation, country);
 		this.crop = -1;
 		this.growth = -1;
 	}
