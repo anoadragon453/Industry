@@ -6,7 +6,7 @@ import java.io.ObjectOutput;
 
 import types.Building;
 import types.Citizen;
-import types.Player;
+import types.Country;
 import types.World;
 
 public class NuclearPlant extends Building {
@@ -25,8 +25,8 @@ public class NuclearPlant extends Building {
 	
 	// Constructor --------------------------------
 	
-	public NuclearPlant(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Player owner) {
-		super(coordinate_tile_x, coordinate_tile_y, orientation, owner);
+	public NuclearPlant(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Country country) {
+		super(coordinate_tile_x, coordinate_tile_y, orientation, country);
 	}
 	
 	// Methods --------------------------------

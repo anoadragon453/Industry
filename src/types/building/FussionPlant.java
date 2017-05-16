@@ -5,8 +5,8 @@ import java.io.ObjectInput;
 import java.io.ObjectOutput;
 
 import types.Building;
-import types.Player;
 import types.Citizen;
+import types.Country;
 import types.World;
 
 public class FussionPlant extends Building {
@@ -25,8 +25,8 @@ public class FussionPlant extends Building {
 	
 	// Constructor --------------------------------
 	
-	public FussionPlant(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Player owner) {
-		super(coordinate_tile_x, coordinate_tile_y, orientation, owner);
+	public FussionPlant(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Country country) {
+		super(coordinate_tile_x, coordinate_tile_y, orientation, country);
 	}
 	
 	// Methods --------------------------------
