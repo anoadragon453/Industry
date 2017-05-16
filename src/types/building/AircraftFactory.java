@@ -48,7 +48,7 @@ public class AircraftFactory extends Building {
 		return citizens;
 	}
 	
-	@Override public void produce(World w) {
+	@Override public void produce(World world) {
 		// TODO
 	}
 	
