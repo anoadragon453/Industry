@@ -7,13 +7,6 @@ import java.io.ObjectOutput;
 
 public class Player implements Externalizable {
 	
-	// Static fields --------------------------------
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -933680187568468527L;
-	
 	// Class fields --------------------------------
 
 	/**

@@ -4,11 +4,6 @@ public abstract class Knot extends Element {
 	
 	// Static fields --------------------------------
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -624524567773136700L;
-	
 	static final String type = "knot";
 	
 	static final int reach = 1;

@@ -12,10 +12,6 @@ import java.io.ObjectOutput;
  */
 public class Amount implements Externalizable {
 	
-	// Static fields --------------------------------
-	
-	private static final long serialVersionUID = 8091085314536647783L;
-	
 	// Class fields --------------------------------
 	
 	/*

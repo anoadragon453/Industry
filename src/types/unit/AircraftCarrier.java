@@ -1,5 +1,9 @@
 package types.unit;
 
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+
 import types.Citizen;
 import types.Player;
 import types.Unit;
@@ -38,6 +42,21 @@ public class AircraftCarrier extends Unit {
 	
 	public Unit[] getUnitsCarried() {
 		return unitsCarried;
+	}
+	
+	@Override public void heal(int health) {
+		// TODO
+		
+	}
+	
+	@Override public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+		// TODO
+		
+	}
+	
+	@Override public void writeExternal(ObjectOutput out) throws IOException {
+		// TODO
+		
 	}
 	
 }

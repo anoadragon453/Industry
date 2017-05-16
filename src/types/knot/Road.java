@@ -1,13 +1,15 @@
 package types.knot;
 
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+
 import types.Knot;
 import types.Player;
 
 public class Road extends Knot {
 	
 	// Static fields --------------------------------
-	
-	private static final long serialVersionUID = -8876823176706896939L;
 	
 	static final String type = "road";
 	
@@ -29,6 +31,21 @@ public class Road extends Knot {
 	
 	@Override public int getReach() {
 		return reach;
+	}
+	
+	@Override public void heal(int health) {
+		// TODO
+		
+	}
+	
+	@Override public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+		// TODO
+		
+	}
+	
+	@Override public void writeExternal(ObjectOutput out) throws IOException {
+		// TODO
+		
 	}
 	
 }

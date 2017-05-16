@@ -4,11 +4,6 @@ public abstract class Building extends Element {
 	
 	// Static --------------------------------
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 5709394369261277463L;
-	
 	static final String type = "building";
 	
 	// Constructors --------------------------------

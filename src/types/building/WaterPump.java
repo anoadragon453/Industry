@@ -1,5 +1,9 @@
 package types.building;
 
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+
 import types.Building;
 import types.Citizen;
 import types.Player;
@@ -8,8 +12,6 @@ import types.World;
 public class WaterPump extends Building {
 	
 	// Static fields --------------------------------
-	
-	private static final long serialVersionUID = -1186990448265888926L;
 	
 	public static final String type = "waterpump";
 
@@ -45,8 +47,22 @@ public class WaterPump extends Building {
 		return citizens;
 	}
 	
-	@Override public void produce(World w) {
-		//TODO
+	@Override public void produce(World world) {
+		// TODO
+	}
+
+	@Override public void heal(int health) {
+		// TODO
+	}
+	
+	@Override public void readExternal(ObjectInput arg0) throws IOException, ClassNotFoundException {
+		// TODO
+		
+	}
+
+	@Override public void writeExternal(ObjectOutput arg0) throws IOException {
+		// TODO
+		
 	}
 	
 }

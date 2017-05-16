@@ -4,11 +4,6 @@ public abstract class Unit extends Element {
 	
 	// Static fields --------------------------------
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 5721173305955564615L;
-	
 	public static final String type = "unit";
 	
 	// Constructors --------------------------------

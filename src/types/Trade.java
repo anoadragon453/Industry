@@ -7,13 +7,6 @@ import java.io.ObjectOutput;
 
 public class Trade implements Externalizable {
 	
-	// Static fields --------------------------------
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -6139817619125355722L;
-	
 	// Class fields --------------------------------
 	
 	public Player seller;

@@ -9,11 +9,6 @@ public class Citizen implements Nameable, Externalizable {
 	
 	// Static fields --------------------------------
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -7411150192939216900L;
-	
 	static final String type = "citizen";
 	
 	/**

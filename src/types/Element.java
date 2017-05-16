@@ -9,13 +9,6 @@ import java.io.Externalizable;
  */
 public abstract class Element implements Nameable, Externalizable {
 	
-	// Static fields --------------------------------
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 3718747230381919964L;
-	
 	// Class fields --------------------------------
 	
 	/**

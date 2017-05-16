@@ -63,13 +63,6 @@ public class World implements Externalizable {
 	 * isthmus              : land plate sandwiched between two land plates in one direction and two sea plates in another direction
 	 */
 	
-	// Static fields --------------------------------
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 172406508128167181L;
-	
 	// Class fields --------------------------------
 	
 	/**

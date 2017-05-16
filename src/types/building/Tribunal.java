@@ -1,5 +1,9 @@
 package types.building;
 
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+
 import types.Building;
 import types.Citizen;
 import types.Player;
@@ -9,9 +13,7 @@ public class Tribunal extends Building {
 	
 	// Static fields --------------------------------
 	
-	private static final long serialVersionUID = -1372806646500888128L;
-	
-	public static final String type = "jail";
+	public static final String type = "tribunal";
 
 	static final int size_x = 1;//TODO: PUT ACTUAL SIZE IN HERE
 	
@@ -45,8 +47,22 @@ public class Tribunal extends Building {
 		return citizens;
 	}
 	
-	@Override public void produce(World w) {
-		//TODO
+	@Override public void produce(World world) {
+		// TODO
+	}
+
+	@Override public void heal(int health) {
+		// TODO
+	}
+	
+	@Override public void readExternal(ObjectInput arg0) throws IOException, ClassNotFoundException {
+		// TODO
+		
+	}
+
+	@Override public void writeExternal(ObjectOutput arg0) throws IOException {
+		// TODO
+		
 	}
 	
 }

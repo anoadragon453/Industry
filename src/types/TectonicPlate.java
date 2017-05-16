@@ -13,13 +13,6 @@ import types.Amount;
 
 public class TectonicPlate implements Externalizable {
 	
-	// Static fields --------------------------------
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 5069507537400609676L;
-	
 	// Class fields --------------------------------
 	
 	/**
