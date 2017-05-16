@@ -9,6 +9,8 @@ public class Sickness {
 	
 	// Static fields --------------------------------
 	
+	public static final String supertype = "sickness";
+	
 	/**
 	 * Global list of all sicknesses loaded from the sickness list file.
 	 */
@@ -49,7 +51,7 @@ public class Sickness {
 	// Constructors --------------------------------
 	
 	private Sickness(String type, int infectivity, int lethality){
-		this.type = "sickness." + type;
+		this.type = type;
 		this.infectivity = infectivity;
 		this.lethality = lethality;
 	}
@@ -71,7 +73,7 @@ public class Sickness {
 	// Methods --------------------------------
 	
 	public String getType() {
-		return this.type;
+		return Sickness.supertype + "." + this.type;
 	}
 	
 }

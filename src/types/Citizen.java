@@ -4,22 +4,36 @@ import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 
 public class Citizen implements Nameable, Externalizable {
 	
 	// Static fields --------------------------------
 	
-	static final String type = "citizen";
+	static final String supertype = "citizen";
 	
 	/**
 	 * Array of the names of all job types for looking up the name in the properties files.
 	 */
-	public static String[] types = {
-			"unemployed"
-			//TODO: ADD ALL JOB TYPES
-	};
+	public static ArrayList<String> types = new ArrayList<String>();
 	
-	
+	static {
+		try {
+			String types = new String(Files.readAllBytes(Paths.get("data\\citizen.types.csv")), StandardCharsets.UTF_8);
+			if(!types.isEmpty()) {
+				for(String line : types.split("\n")) {
+					if(line.charAt(0) != '#') {
+						Citizen.types.add(line);
+					}
+				}
+			}
+		} catch(Throwable t) {
+			t.printStackTrace();
+		}
+	}
 	
 	// Class fields --------------------------------
 	
@@ -34,7 +48,7 @@ public class Citizen implements Nameable, Externalizable {
 	/**
 	 * ID of the job of this citizen. 0 if unemployed.
 	 */
-	public int instancetype;
+	public int type;
 	/**
 	 * IDs of the parents of this citizen; negative if this citizen was generated with the world.
 	 */
@@ -162,7 +176,7 @@ public class Citizen implements Nameable, Externalizable {
 	// Methods --------------------------------
 	
 	public String getType() {
-		return Citizen.type + "." + types[instancetype];
+		return Citizen.supertype + "." + types.get(type);
 	}
 	
 	public void addChild(Citizen child) {
