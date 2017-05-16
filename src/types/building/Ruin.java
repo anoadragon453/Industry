@@ -7,7 +7,7 @@ import java.io.ObjectOutput;
 import types.Amount;
 import types.Building;
 import types.Citizen;
-import types.Player;
+import types.Country;
 import types.World;
 
 public class Ruin extends Building {
@@ -28,15 +28,15 @@ public class Ruin extends Building {
 	
 	// Constructor --------------------------------
 	
-	public Ruin(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Player owner, int size_x, int size_y) {
-		super(coordinate_tile_x, coordinate_tile_y, orientation, owner);
+	public Ruin(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Country country, int size_x, int size_y) {
+		super(coordinate_tile_x, coordinate_tile_y, orientation, country);
 		this.size_x = size_x;
 		this.size_y = size_y;
 		this.citizens = new Citizen[0];
 	}
 	
 	public Ruin(Building building) {
-		super(building.coordinate_tile_x, building.coordinate_tile_y, building.orientation, building.owner);
+		super(building.coordinate_tile_x, building.coordinate_tile_y, building.orientation, building.country);
 		this.size_x = building.getSize_x();
 		this.size_y = building.getSize_y();
 		this.citizens = building.getCitizens();
