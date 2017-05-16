@@ -1,5 +1,9 @@
 package types.building;
 
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+
 import types.Building;
 import types.Citizen;
 import types.Player;
@@ -9,8 +13,6 @@ import types.World;
 public class Farm extends Building {
 	
 	// Static fields --------------------------------
-	
-	private static final long serialVersionUID = -98985404371723838L;
 	
 	public static final String type = "farm";
 
@@ -77,7 +79,7 @@ public class Farm extends Building {
 	 *     (No, farmers have to work from where plants can start growing and continue until they harvest)
 	 */
 	
-	@Override public void produce(World w) {
+	@Override public void produce(World world) {
 		if(growth > 0) {
 			++growth;
 			//payWages();
@@ -114,6 +116,20 @@ public class Farm extends Building {
 	public void chooseCrop(byte resource) {
 		this.crop = resource;
 		this.growth = 0;
+	}
+	
+	@Override public void heal(int health) {
+		// TODO
+	}
+	
+	@Override public void readExternal(ObjectInput arg0) throws IOException, ClassNotFoundException {
+		// TODO
+		
+	}
+
+	@Override public void writeExternal(ObjectOutput arg0) throws IOException {
+		// TODO
+		
 	}
 	
 }

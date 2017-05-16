@@ -1,5 +1,9 @@
 package types.building;
 
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+
 import types.Building;
 import types.Citizen;
 import types.Player;
@@ -8,8 +12,6 @@ import types.World;
 public class Hospital extends Building {
 	
 	// Static fields --------------------------------
-	
-	private static final long serialVersionUID = 1861790499877296632L;
 	
 	public static final String type = "hospital";
 
@@ -45,7 +47,7 @@ public class Hospital extends Building {
 		return citizens;
 	}
 	
-	@Override public void produce(World w) {
+	@Override public void produce(World world) {
 		/*
 		 * TODO:
 		 * 
@@ -61,4 +63,17 @@ public class Hospital extends Building {
 		 */
 	}
 	
+	@Override public void heal(int health) {
+		// TODO
+	}
+	
+	@Override public void readExternal(ObjectInput arg0) throws IOException, ClassNotFoundException {
+		// TODO
+		
+	}
+
+	@Override public void writeExternal(ObjectOutput arg0) throws IOException {
+		// TODO
+		
+	}
 }
