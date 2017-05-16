@@ -194,7 +194,7 @@ public class Citizen implements Nameable, Externalizable {
 	 * If female and not pregnant, it makes the citizen pregnant.
 	 */
 	public void makePregnant() {
-		if(sex == 0) {//if female (0b0---) and non pregnant (0b-000)
+		if(sex == 0) {//if female and non pregnant
 			sex = 1;//set to pregnant
 		}
 	}
