@@ -11,12 +11,16 @@ import java.util.ListIterator;
 
 import types.Amount;
 
-public class TectonicPlate implements Externalizable {
+public class TectonicPlate implements ProperlyNameable, Externalizable {
+	
+	// Static fields --------------------------------
+	
+	public static final String type = "plate";
 	
 	// Class fields --------------------------------
 	
 	/**
-	 * Name given to this province.
+	 * Proper name given to this province.
 	 */
 	public String name;
 	/**
@@ -93,6 +97,14 @@ public class TectonicPlate implements Externalizable {
 	}
 	
 	// Methods --------------------------------
+	
+	public String getType() {
+		return type;
+	}
+	
+	public String getProperName() {
+		return name;
+	}
 	
 	public void lock() {
 		this.unlocked = false;

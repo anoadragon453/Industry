@@ -9,7 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-public class Citizen implements Nameable, Externalizable {
+public class Citizen implements ProperlyNameable, Externalizable {
 	
 	// Static fields --------------------------------
 	
@@ -37,6 +37,10 @@ public class Citizen implements Nameable, Externalizable {
 	
 	// Class fields --------------------------------
 	
+	/**
+	 * This citizen's name.
+	 */
+	public String name;
 	/**
 	 * ID of the building where this unit lives; -1 if homeless
 	 */
@@ -177,6 +181,10 @@ public class Citizen implements Nameable, Externalizable {
 	
 	public String getType() {
 		return Citizen.supertype + "." + types.get(type);
+	}
+	
+	public String getProperName() {
+		return name;
 	}
 	
 	public void addChild(Citizen child) {

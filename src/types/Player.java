@@ -5,7 +5,11 @@ import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
 
-public class Player implements Externalizable {
+public class Player implements ProperlyNameable, Externalizable {
+	
+	// Static fields --------------------------------
+	
+	public static final String type = "player";
 	
 	// Class fields --------------------------------
 
@@ -29,16 +33,24 @@ public class Player implements Externalizable {
 		this.countryName = countryName;
 		this.ideology = new byte[4];
 	}
-
-	@Override
-	public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
-		// TODO Auto-generated method stub
+	
+	// Methods --------------------------------
+	
+	public String getType() {
+		return type;
+	}
+	
+	public String getProperName() {
+		return name;
+	}
+	
+	@Override public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+		// TODO
 		
 	}
 
-	@Override
-	public void writeExternal(ObjectOutput out) throws IOException {
-		// TODO Auto-generated method stub
+	@Override public void writeExternal(ObjectOutput out) throws IOException {
+		// TODO
 		
 	}
 	
