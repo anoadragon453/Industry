@@ -1,0 +1,10 @@
+flu         , 10,  1
+dengue      ,  9,  2
+tuberculosis, 10,  3
+pertussis   ,  5,  5
+diphtheria  ,  5,  3
+rubella     ,  5,  3
+variola     , 10,  4
+ebola       ,  6, 10
+malaria     ,  6,  7
+plague      ,  8,  8

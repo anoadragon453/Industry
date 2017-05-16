@@ -19,44 +19,7 @@ public class Citizen implements Nameable, Externalizable {
 			//TODO: ADD ALL JOB TYPES
 	};
 	
-	public static class Sickness {
-		
-		public String type;
-		/**
-		 * Likelihood of contagion.
-		 */
-		public int infectivity;
-		/**
-		 * Amount of damage it causes.
-		 */
-		public int lethality;
-		
-		public Sickness(String type, int infectivity, int lethality){
-			this.type = type;
-			this.infectivity = infectivity;
-			this.lethality = lethality;
-		}
-		
-	}
 	
-	/**
-	 * Array of all sickness types.
-	 */
-	//TODO: LOAD THIS FROM A FILE INSTEAD OF HARD CODING EVERYTHING
-	public static Sickness[] sicknesses = {
-			null,//"healthy", 0, 0
-			new Sickness("flu", 10, 1),
-			new Sickness("dengue", 9, 2),
-			new Sickness("tuberculosis", 10, 3),
-			new Sickness("pertussis", 5, 5),
-			new Sickness("diphtheria", 5, 3),
-			new Sickness("rubella", 5, 3),
-			new Sickness("variola", 10, 4),
-			new Sickness("ebola", 6, 10),
-			new Sickness("malaria", 6, 7),
-			new Sickness("plague", 8, 8),
-			new Sickness("brainbug", 6, 9),
-	};
 	
 	// Class fields --------------------------------
 	
@@ -213,7 +176,7 @@ public class Citizen implements Nameable, Externalizable {
 	}
 	
 	public String getSicknessType() {
-		return sickness < 0 ? "sickness.healthy" : "sickness." + sicknesses[sickness].type;
+		return sickness < 0 ? "sickness.healthy" : Sickness.getSickness(sickness).getType();
 	}
 	
 	public void setSickness(byte sickness) {
@@ -270,8 +233,10 @@ public class Citizen implements Nameable, Externalizable {
 				 * TODO: For every citizen, there's a likelihood equivalent to the sickness's infectivity to set them to the same sickness.
 				 */
 			}
-			//reduce health
-			needs[0] -= sicknesses[sickness].lethality;
+			//Reduce health if citizen is sick
+			if(sickness >= 0) {
+				needs[0] -= Sickness.getSickness(sickness).lethality;
+			}
 			//Sicknesses only last for a month. If a citizen is sick, the sickness is unset automatically as part of the tick.
 			setSickness((byte) -1);
 		}
