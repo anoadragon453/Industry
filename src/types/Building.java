@@ -56,12 +56,28 @@ public abstract class Building extends Element {
 		return type;
 	}
 	
+	/**
+	 * Gets this building's depth.
+	 * @return this building's depth
+	 */
 	public abstract int getSize_x();
 	
+	/**
+	 * Gets this building's width.
+	 * @return this building's width
+	 */
 	public abstract int getSize_y();
 	
+	/**
+	 * Returns all the citizens in this building, both workers and users.
+	 * @return All the citizens in this building, both workers and users.
+	 */
 	public abstract Citizen[] getCitizens();
 	
-	public abstract void produce(World w);
+	/**
+	 * Production function, does whatever this building is suppossed to do.
+	 * @param world World where this building is set.
+	 */
+	public abstract void produce(World world);
 	
 }

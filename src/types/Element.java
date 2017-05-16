@@ -64,4 +64,10 @@ public abstract class Element implements Nameable, Externalizable {
 		return 0;
 	}
 	
+	/**
+	 * Changes this element's health.
+	 * @param health Number to be added to this element's health.
+	 */
+	public abstract void heal(int health);
+	
 }

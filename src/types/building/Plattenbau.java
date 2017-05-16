@@ -9,11 +9,11 @@ import types.Citizen;
 import types.Player;
 import types.World;
 
-public class AircraftFactory extends Building {
+public class Plattenbau extends Building {
 	
 	// Static fields --------------------------------
 	
-	static final String type = "aircraftfactory";
+	public static final String type = "plattenbau";
 	
 	static final int size_x = 1;//TODO: PUT ACTUAL SIZE IN HERE
 	
@@ -25,15 +25,14 @@ public class AircraftFactory extends Building {
 	
 	// Constructor --------------------------------
 	
-	public AircraftFactory(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Player owner) {
+	public Plattenbau(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Player owner) {
 		super(coordinate_tile_x, coordinate_tile_y, orientation, owner);
-		this.citizens = new Citizen[0];
 	}
 	
 	// Methods --------------------------------
 	
 	@Override public String getType() {
-		return super.getType() + "." + AircraftFactory.type;
+		return super.getType() + "." + Plattenbau.type;
 	}
 	
 	@Override public int getSize_x() {
@@ -51,18 +50,17 @@ public class AircraftFactory extends Building {
 	@Override public void produce(World w) {
 		// TODO
 	}
-	
+
 	@Override public void heal(int health) {
 		// TODO
-		
 	}
 	
-	@Override public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+	@Override public void readExternal(ObjectInput arg0) throws IOException, ClassNotFoundException {
 		// TODO
 		
 	}
 
-	@Override public void writeExternal(ObjectOutput out) throws IOException {
+	@Override public void writeExternal(ObjectOutput arg0) throws IOException {
 		// TODO
 		
 	}

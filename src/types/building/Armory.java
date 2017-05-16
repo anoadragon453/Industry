@@ -1,5 +1,9 @@
 package types.building;
 
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+
 import types.Building;
 import types.Citizen;
 import types.Player;
@@ -8,8 +12,6 @@ import types.World;
 public class Armory extends Building {
 	
 	// Static fields --------------------------------
-	
-	private static final long serialVersionUID = -7425952490718631223L;
 	
 	static final String type = "armory";
 	
@@ -46,7 +48,22 @@ public class Armory extends Building {
 	}
 	
 	@Override public void produce(World w) {
-		//TODO
+		// TODO
+	}
+	
+	@Override public void heal(int health) {
+		// TODO
+		
+	}
+	
+	@Override public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+		// TODO
+		
+	}
+	
+	@Override public void writeExternal(ObjectOutput out) throws IOException {
+		// TODO
+		
 	}
 	
 }
