@@ -2,6 +2,9 @@ package types;
 
 import java.io.Externalizable;
 
+import types.Typed.Typification;
+
+@Typed(typification = Typification.CLASS)
 public abstract class Event implements Nameable, Externalizable {
 	
 	// Static fields --------------------------------

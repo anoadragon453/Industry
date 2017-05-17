@@ -6,12 +6,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import integerMath.Op;
+import types.Typed.Typification;
 
-/**
- * Resource is a "type" class, that is, its types are represented as instances and its getType method calls non-static fields.
- * @author Javier
- *
- */
+@Typed(typification = Typification.INSTANCE)
 public class Resource implements Nameable {
 	
 	// Static fields --------------------------------

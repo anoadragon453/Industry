@@ -2,11 +2,14 @@ package types;
 
 import java.io.Externalizable;
 
+import types.Typed.Typification;
+
 /**
  * This class abstracts the idea of element that can be owned by a player, located in a map and damaged or destroyed.
  * @author Javier
  *
  */
+@Typed(typification = Typification.CLASS)
 public abstract class Element implements Nameable, Externalizable {
 	
 	// Class fields --------------------------------

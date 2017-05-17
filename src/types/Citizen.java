@@ -9,6 +9,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+import types.Typed.Typification;
+
+@Typed(typification = Typification.FIELD)
 public class Citizen implements ProperlyNameable, Externalizable {
 	
 	// Static fields --------------------------------
@@ -52,7 +55,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	/**
 	 * ID of the job of this citizen. 0 if unemployed.
 	 */
-	public int type;
+	@Typed.TypeField public int type;
 	/**
 	 * IDs of the parents of this citizen; negative if this citizen was generated with the world.
 	 */

@@ -10,7 +10,9 @@ import java.util.List;
 import java.util.ListIterator;
 
 import types.Amount;
+import types.Typed.Typification;
 
+@Typed(typification = Typification.GLOBAL)//TODO: Make a tectonic plate's type its shape? Mountain, ocean, lake, plain, valley, coast, river...
 public class TectonicPlate implements ProperlyNameable, Externalizable {
 	
 	// Static fields --------------------------------
