@@ -1,10 +1,18 @@
 package types;
 
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
+import java.lang.annotation.Target;
+
 /**
  * This annotation indicates that the instances of this class have a type which defines some of their properties.
  * @author Javier
  *
  */
+@Documented
+@Target(ElementType.TYPE)
+@Inherited
 public @interface Typed {
 	
 	/**
@@ -12,6 +20,9 @@ public @interface Typed {
 	 * @author Javier
 	 *
 	 */
+	@Documented
+	@Target(ElementType.FIELD)
+	@Inherited
 	public @interface TypeField {
 		
 	}
