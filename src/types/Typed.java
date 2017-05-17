@@ -23,7 +23,7 @@ public @interface Typed {
 	@Documented
 	@Target(ElementType.FIELD)
 	@Inherited
-	public @interface TypeField {
+	public @interface Type {
 		
 	}
 	

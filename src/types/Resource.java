@@ -16,7 +16,7 @@ public class Resource implements Nameable {
 	/**
 	 * String identifying the type of object this is for name lookups.
 	 */
-	public static final String type = "resource";
+	public static final String supertype = "resource";
 	/**
 	 * Global list of all resources loaded from the resource list files.
 	 */
@@ -221,15 +221,15 @@ public class Resource implements Nameable {
 	
 	// Methods --------------------------------
 	
-	public String getType() {
-		return type;
+	@Override public String getType() {
+		return supertype;
 	}
 	
 	// Resource types --------------------------------
 	
 	public static class NaturalResource extends Resource {
 		// Class fields --------------------------------
-		String type;
+		@Typed.Type String type;
 		public boolean edible;
 		public int optimalTemperature;
 		public int optimalHumidity;
@@ -255,13 +255,13 @@ public class Resource implements Nameable {
 		}
 		// Methods --------------------------------
 		@Override public String getType() {
-			return Resource.type + "." + this.type;
+			return supertype + "." + type;
 		}
 	}
 	
 	public static class SoilResource extends Resource {
 		// Class fields --------------------------------
-		String type;
+		@Typed.Type String type;
 		public int typicalHumidity;
 		/**
 		 * How fertile this resource makes the soil.
@@ -276,13 +276,13 @@ public class Resource implements Nameable {
 		}
 		// Methods --------------------------------
 		@Override public String getType() {
-			return Resource.type + "." + this.type;
+			return supertype + "." + type;
 		}
 	}
 	
 	public static class MineralResource extends Resource {
 		// Class fields --------------------------------
-		String type;
+		@Typed.Type String type;
 		public boolean solid;
 		// Constructors --------------------------------
 		private MineralResource(String type, int rarity, boolean solid) {
@@ -291,13 +291,13 @@ public class Resource implements Nameable {
 		}
 		// Methods --------------------------------
 		@Override public String getType() {
-			return Resource.type + "." + this.type;
+			return supertype + "." + type;
 		}
 	}
 	
 	public static class ManufacturedResource extends Resource {
 		// Class fields --------------------------------
-		String type;
+		@Typed.Type String type;
 		public boolean luxury;
 		// Constructors --------------------------------
 		private ManufacturedResource(String type, boolean luxury) {
@@ -307,7 +307,7 @@ public class Resource implements Nameable {
 		}
 		// Methods --------------------------------
 		@Override public String getType() {
-			return Resource.type + "." + this.type;
+			return supertype + "." + type;
 		}
 	}
 	

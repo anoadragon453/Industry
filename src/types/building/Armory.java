@@ -7,13 +7,14 @@ import java.io.ObjectOutput;
 import types.Building;
 import types.Citizen;
 import types.Country;
+import types.Typed;
 import types.World;
 
 public class Armory extends Building {
 	
 	// Static fields --------------------------------
 	
-	static final String type = "armory";
+	@Typed.Type static final String type = "armory";
 	
 	static final int size_x = 1;//TODO: PUT ACTUAL SIZE IN HERE
 	

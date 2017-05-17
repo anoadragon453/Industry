@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
 
+import types.Typed.Typification;
+
+@Typed(typification = Typification.GLOBAL)
 public class Country implements ProperlyNameable, Externalizable {
 	
 	// Static fields --------------------------------

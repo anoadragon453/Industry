@@ -4,7 +4,7 @@ public abstract class Unit extends Element {
 	
 	// Static fields --------------------------------
 
-	public static final String type = "unit";
+	public static final String supertype = "unit";
 	
 	// Constructors --------------------------------
 	
@@ -43,7 +43,7 @@ public abstract class Unit extends Element {
 	// Methods --------------------------------
 	
 	public String getType() {
-		return type;
+		return supertype;
 	}
 	
 }

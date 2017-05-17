@@ -8,13 +8,14 @@ import types.Building;
 import types.Citizen;
 import types.Country;
 import types.Resource;
+import types.Typed;
 import types.World;
 
 public class Farm extends Building {
 	
 	// Static fields --------------------------------
 	
-	public static final String type = "farm";
+	@Typed.Type public static final String type = "farm";
 
 	static final int size_x = 1;//TODO: PUT ACTUAL SIZE IN HERE
 	

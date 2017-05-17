@@ -7,13 +7,14 @@ import java.io.ObjectOutput;
 import types.Building;
 import types.Citizen;
 import types.Country;
+import types.Typed;
 import types.World;
 
 public class Tribunal extends Building {
 	
 	// Static fields --------------------------------
 	
-	public static final String type = "tribunal";
+	@Typed.Type public static final String type = "tribunal";
 
 	static final int size_x = 1;//TODO: PUT ACTUAL SIZE IN HERE
 	

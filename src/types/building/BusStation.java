@@ -7,13 +7,14 @@ import java.io.ObjectOutput;
 import types.Building;
 import types.Citizen;
 import types.Country;
+import types.Typed;
 import types.World;
 
 public class BusStation extends Building {
 	
 	// Static fields --------------------------------
 	
-	public static final String type = "busstation";
+	@Typed.Type public static final String type = "busstation";
 	
 	static final int size_x = 1;//TODO: PUT ACTUAL SIZE IN HERE
 	

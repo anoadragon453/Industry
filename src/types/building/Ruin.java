@@ -8,13 +8,14 @@ import types.Amount;
 import types.Building;
 import types.Citizen;
 import types.Country;
+import types.Typed;
 import types.World;
 
 public class Ruin extends Building {
 	
 	// Static fields --------------------------------
 	
-	static final String type = "ruin";
+	@Typed.Type static final String type = "ruin";
 	
 	// Class fields --------------------------------
 	

@@ -4,7 +4,7 @@ public abstract class Knot extends Element {
 	
 	// Static fields --------------------------------
 	
-	static final String type = "knot";
+	static final String supertype = "knot";
 	
 	static final int reach = 1;
 	
@@ -70,7 +70,7 @@ public abstract class Knot extends Element {
 	// Methods --------------------------------
 	
 	public String getType() {
-		return type;
+		return supertype;
 	}
 	
 	public int getReach() {

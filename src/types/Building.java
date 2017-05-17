@@ -4,7 +4,7 @@ public abstract class Building extends Element {
 	
 	// Static --------------------------------
 	
-	static final String type = "building";
+	static final String supertype = "building";
 	
 	// Constructors --------------------------------
 	
@@ -48,7 +48,7 @@ public abstract class Building extends Element {
 	// Methods --------------------------------
 	
 	public String getType() {
-		return type;
+		return supertype;
 	}
 	
 	/**

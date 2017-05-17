@@ -55,7 +55,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	/**
 	 * ID of the job of this citizen. 0 if unemployed.
 	 */
-	@Typed.TypeField public int type;
+	@Typed.Type public int type;
 	/**
 	 * IDs of the parents of this citizen; negative if this citizen was generated with the world.
 	 */
