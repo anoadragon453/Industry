@@ -12,7 +12,7 @@ public class Country implements ProperlyNameable, Externalizable {
 	
 	// Static fields --------------------------------
 	
-	public static final String type = "country";
+	@Typed.Type public static final String type = "country";
 	
 	// Class fields --------------------------------
 	

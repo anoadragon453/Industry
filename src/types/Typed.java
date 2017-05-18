@@ -3,23 +3,28 @@ package types;
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * This annotation indicates that the instances of this class have a type which defines some of their properties.
+ * This annotation indicates that the instances of this class have a "type" which defines some of their properties and may be defined in different ways with respect to this class.
+ * This annotation may be used with classes that implement Nameable, and it must be fulfilled that the method getType returns the same string iff the instances are of the same type as "type" is defined for that class.
  * @author Javier
  *
  */
+@Retention(RetentionPolicy.SOURCE)
 @Documented
 @Target(ElementType.TYPE)
 @Inherited
 public @interface Typed {
 	
 	/**
-	 * Indicates this field determines the type of an instance.
+	 * Indicates that this field determines the type of an instance.
 	 * @author Javier
 	 *
 	 */
+	@Retention(RetentionPolicy.SOURCE)
 	@Documented
 	@Target(ElementType.FIELD)
 	@Inherited
@@ -60,7 +65,9 @@ public @interface Typed {
 		 */
 		GLOBAL
 	}
-	
+	/**
+	 * Typification this class uses. See javadoc for its value for more info.
+	 */
 	Typification typification();
 	
 }

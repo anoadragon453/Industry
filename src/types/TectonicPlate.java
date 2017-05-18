@@ -12,12 +12,16 @@ import java.util.ListIterator;
 import types.Amount;
 import types.Typed.Typification;
 
-@Typed(typification = Typification.GLOBAL)//TODO: Make a tectonic plate's type its shape? Mountain, ocean, lake, plain, valley, coast, river...
+@Typed(typification = Typification.GLOBAL)
 public class TectonicPlate implements ProperlyNameable, Externalizable {
 	
 	// Static fields --------------------------------
 	
-	public static final String type = "plate";
+	/*
+	 * TODO: Make a tectonic plate's type its shape? Mountain, ocean, lake, plain, valley, coast, river...
+	 * If I go with this, I have to change the @Typed annotation and remove the @Typed.Type annotation
+	 */
+	@Typed.Type public static final String type = "plate";
 	
 	// Class fields --------------------------------
 	
