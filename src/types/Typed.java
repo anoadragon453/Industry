@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 /**
  * This annotation indicates that the instances of this class have a "type" which defines some of their properties and may be defined in different ways with respect to this class.
  * This annotation may be used with classes that implement Nameable, and it must be fulfilled that the method getType returns the same string iff the instances are of the same type as "type" is defined for that class.
- * @see types.Typed.Typification
+ * @see Typification
  * @author Javier
  *
  */
@@ -22,7 +22,7 @@ public @interface Typed {
 	
 	/**
 	 * Indicates that this field of a @Typed class determines the type of an instance.
-	 * @see types.Typed
+	 * @see Typed
 	 * @author Javier
 	 *
 	 */
@@ -35,7 +35,11 @@ public @interface Typed {
 	
 	/**
 	 * Enumeration of the relationships a @Typed class may have with the types of its instances.
-	 * @see types.Typed
+	 * @see Typed
+	 * @see #CLASS
+	 * @see #INSTANCE
+	 * @see #FIELD
+	 * @see #GLOBAL
 	 * @author Javier
 	 *
 	 */
@@ -71,7 +75,7 @@ public @interface Typed {
 	}
 	/**
 	 * Typification a @Typed class uses.
-	 * @see types.Typed
+	 * @see Typed
 	 */
 	Typification typification();
 	
