@@ -49,7 +49,7 @@ public @interface Typed {
 		 */
 		INSTANCE,
 		/**
-		 * Many instances, one type.
+		 * Multiple instances, one type.
 		 * 
 		 * The type or properties of each instance of this class is stored in its fields.
 		 * Different instances of the same class may share a type by defining the same type-determining properties or characteristics within, or be of different types.
