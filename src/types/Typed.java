@@ -28,7 +28,7 @@ public @interface Typed {
 	@Documented
 	@Target(ElementType.FIELD)
 	@Inherited
-	public @interface Type {
+	public static @interface Type {
 	}
 	
 	public static enum Typification {
