@@ -16,9 +16,10 @@ public class Player extends Citizen {
 	
 	// Constructors --------------------------------
 	
-	public Player(World world, String name, String countryName, byte sex, byte belief, byte[] ideology, Country country) {
+	public Player(World world, String name, String countryName, byte age, byte sex, byte belief, byte[] ideology, Country country) {
 		
-		super(name, country.getGovernment(), null, null, 0, sex, belief, ideology, country);
+		super(name, country.getGovernment(), null, null, -age, sex, belief, ideology, country);
+		this.setType("governor");
 		/*
 		 * TODO:
 		 * initialize a new country

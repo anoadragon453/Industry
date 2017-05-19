@@ -19,11 +19,16 @@ public class Country implements ProperlyNameable, Externalizable {
 	
 	public String name;
 	public Government government;
+	public int[] laws;
 	
 	// Constructors --------------------------------
 	
-	public Country(String name) {
+	public Country(World world, String name) {
 		this.name = name;
+		/*
+		 * TODO: Generate country in the world with buildings and stuff
+		 * this.government = wherever the government building was created.
+		 */
 	}
 	
 	// Methods --------------------------------

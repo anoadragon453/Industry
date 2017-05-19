@@ -58,7 +58,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	/**
 	 * Type of this citizen (its current work or age or disability if can't work).
 	 */
-	@Typed.Type public int type;
+	@Typed.Type public byte type;
 	/**
 	 * Parents of this citizen. May be null.
 	 */
@@ -197,6 +197,19 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	
 	public String getType() {
 		return Citizen.supertype + "." + types.get(type);
+	}
+	
+	public void setType(byte type) {
+		this.type = type;
+	}
+	
+	public void setType(String type) {
+		for(int i = 0; i < types.size(); ++i) {
+			if(types.get(i).equals(type)) {
+				this.type = (byte) i;
+				break;
+			}
+		}
 	}
 	
 	public String getProperName() {
