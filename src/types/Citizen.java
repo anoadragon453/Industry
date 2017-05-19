@@ -26,6 +26,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	public static final byte CHILD;
 	public static final byte ELDER;
 	public static final byte DISABLED;
+	public static final byte HOMEMAKER;
 	public static final byte STUDENT;
 	public static final byte GOVERNOR;
 	public static final byte SENATOR;
@@ -58,6 +59,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 		CHILD = (byte) types.indexOf("child");
 		ELDER = (byte) types.indexOf("elder");
 		DISABLED = (byte) types.indexOf("disabled");
+		HOMEMAKER = (byte) types.indexOf("homemaker");
 		STUDENT = (byte) types.indexOf("student");
 		GOVERNOR = (byte) types.indexOf("governor");
 		SENATOR = (byte) types.indexOf("senator");
