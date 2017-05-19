@@ -9,7 +9,6 @@ import types.Citizen;
 import types.Country;
 import types.Resource;
 import types.Typed;
-import types.World;
 
 public class Farm extends Building {
 	
@@ -80,7 +79,7 @@ public class Farm extends Building {
 	 *     (No, farmers have to work from where plants can start growing and continue until they harvest)
 	 */
 	
-	@Override public void produce(World world) {
+	@Override public void produce() {
 		if(growth > 0) {
 			++growth;
 			//payWages();

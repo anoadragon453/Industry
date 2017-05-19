@@ -9,7 +9,6 @@ import types.Building;
 import types.Citizen;
 import types.Country;
 import types.Typed;
-import types.World;
 
 public class Ruin extends Building {
 	
@@ -62,7 +61,7 @@ public class Ruin extends Building {
 		return citizens;
 	}
 
-	@Override public void produce(World w) {
+	@Override public void produce() {
 	}
 
 	@Override public void heal(int health) {

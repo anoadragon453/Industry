@@ -17,8 +17,21 @@ public class Country implements ProperlyNameable, Externalizable {
 	
 	// Class fields --------------------------------
 	
+	/**
+	 * World this country is part of.
+	 */
+	public World world;
+	/**
+	 * Name of this country.
+	 */
 	public String name;
+	/**
+	 * Government building of this country.
+	 */
 	public Government government;
+	/**
+	 * Code of laws of this country, represented as an array of the punishment for each act in months of jail, 0 if it's legal.
+	 */
 	public int[] laws;
 	
 	// Constructors --------------------------------

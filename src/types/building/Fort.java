@@ -8,7 +8,6 @@ import types.Building;
 import types.Citizen;
 import types.Country;
 import types.Typed;
-import types.World;
 
 public class Fort extends Building {
 	
@@ -48,7 +47,7 @@ public class Fort extends Building {
 		return citizens;
 	}
 	
-	@Override public void produce(World world) {
+	@Override public void produce() {
 		// TODO
 	}
 

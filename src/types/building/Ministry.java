@@ -9,7 +9,6 @@ import types.Citizen;
 import types.Country;
 import types.Typed;
 import types.Typed.Typification;
-import types.World;
 
 @Typed(typification = Typification.FIELD)
 public class Ministry extends Building {
@@ -57,7 +56,7 @@ public class Ministry extends Building {
 		return citizens;
 	}
 	
-	@Override public void produce(World world) {
+	@Override public void produce() {
 		// TODO
 	}
 

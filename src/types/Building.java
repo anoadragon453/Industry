@@ -71,8 +71,7 @@ public abstract class Building extends Element {
 	
 	/**
 	 * Production function, does whatever this building is suppossed to do.
-	 * @param world World where this building is set.
 	 */
-	public abstract void produce(World world);
+	public abstract void produce();
 	
 }
