@@ -14,11 +14,6 @@ public class Amount implements Externalizable {
 	
 	// Class fields --------------------------------
 	
-	/*
-	 * TODO:
-	 * MAYBE CHANGE IT TO SHORT[]
-	 */
-	
 	/**
 	 * Index of the resource within the list.
 	 */
