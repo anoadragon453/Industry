@@ -6,12 +6,12 @@ public interface Nameable {
 	
 	public String getType();
 	
-	public default String getName(Properties properties) {
+	public default String getCommonName(Properties properties) {
 		String result = properties.getProperty(this.getType() + ".name");
 		return result == null ? this.getType() : result;
 	}
 	
-	public default String getDescription(Properties properties) {
+	public default String getCommonDescription(Properties properties) {
 		String result = properties.getProperty(this.getType() + ".desc");
 		return result == null ? this.getType() : result;
 	}
