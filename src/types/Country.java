@@ -6,6 +6,7 @@ import java.io.ObjectInput;
 import java.io.ObjectOutput;
 
 import types.Typed.Typification;
+import types.building.Government;
 
 @Typed(typification = Typification.GLOBAL)
 public class Country implements ProperlyNameable, Externalizable {
@@ -17,6 +18,7 @@ public class Country implements ProperlyNameable, Externalizable {
 	// Class fields --------------------------------
 	
 	public String name;
+	public Government government;
 	
 	// Constructors --------------------------------
 	
@@ -32,6 +34,10 @@ public class Country implements ProperlyNameable, Externalizable {
 	
 	public String getProperName() {
 		return name;
+	}
+	
+	public Building getGovernment() {
+		return government;
 	}
 	
 	@Override public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {

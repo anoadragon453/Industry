@@ -12,15 +12,20 @@ public class Player extends Citizen {
 	
 	
 	// Class fields --------------------------------
-
+	
 	
 	
 	// Constructors --------------------------------
 	
-	public Player(World world, String name, String countryName, byte[] ideology) {
-		//initialize a new country
+	public Player(World world, String name, String countryName, byte sex, byte belief, byte[] ideology, Country country) {
 		
-		//create its basic buildings
+		super(name, country.getGovernment(), null, null, 0, sex, belief, ideology, country);
+		/*
+		 * TODO:
+		 * initialize a new country
+		 * create its basic buildings
+		 * ...
+		 */
 		
 		/*
 		 * construct a citizen with
@@ -30,6 +35,7 @@ public class Player extends Citizen {
 		 * 		a specified ideology as ideology
 		 * 		type being whatever type stands for "chairman" or "state ruler" or whatever
 		 */
+		
 	}
 	
 	// Methods --------------------------------

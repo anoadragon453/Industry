@@ -17,11 +17,14 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	// Static fields --------------------------------
 	
 	static final String supertype = "citizen";
-	
 	/**
 	 * Array of the names of all job types for looking up the name in the properties files.
 	 */
 	public static ArrayList<String> types = new ArrayList<String>();
+	static final int NEEDS_ARRAY_SIZE = 6;
+	static final int IDEOLOGY_ARRAY_SIZE = 4;
+	static final int SKILLS_ARRAY_SIZE = 5;
+	static final int POSESSIONS_ARRAY_SIZE = 0;
 	
 	static {
 		try {
@@ -45,23 +48,23 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	 */
 	public String name;
 	/**
-	 * ID of the building where this unit lives; -1 if homeless
+	 * Building where this unit lives.
 	 */
 	public Building home;
 	/**
-	 * ID of the building where this unit works; -1 if unemployed
+	 * Building where this citizen works.
 	 */
 	public Building workplace;
 	/**
-	 * ID of the job of this citizen. 0 if unemployed.
+	 * Type of this citizen (its current work or age or disability if can't work).
 	 */
 	@Typed.Type public int type;
 	/**
-	 * IDs of the parents of this citizen; negative if this citizen was generated with the world.
+	 * Parents of this citizen. May be null.
 	 */
 	public Citizen father, mother;
 	/**
-	 * IDs of the offspring of this citizen.
+	 * Children of this citizen.
 	 */
 	public Citizen[] offspring;
 	/**
@@ -118,13 +121,13 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	 * skill[4] : psychology
 	 *            Affects leading and diplomacy skills.
 	 */
-	public byte[] skill;
+	public byte[] skills;
 	/**
-	 * Shit this citizen owns
+	 * Shit this citizen owns.
 	 */
 	public byte[] posessions;
 	/**
-	 * Country this citizen is from
+	 * Country this citizen belongs to.
 	 */
 	public Country country;
 	
@@ -138,18 +141,30 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	 * @param birthDate
 	 * @param owner
 	 */
-	public Citizen(Building home, Citizen father, Citizen mother, int birthDate, Country country) {
+	public Citizen(String name, Building home, Citizen father, Citizen mother, int birthDate, byte sex, byte belief, byte[] ideology, Country country) {
+		this.name = name;
 		this.home = home;
 		this.workplace = null;
-		(this.father = father).addChild(this);
-		(this.mother = mother).addChild(this);
+		this.type = 0;
+		this.father = father;
+		this.mother = mother;
+		if(father != null) {
+			father.addChild(this);
+		}
+		if(mother != null) {
+			mother.addChild(this);
+		}
 		this.offspring = new Citizen[0];
 		this.birthDate = birthDate;
 		this.deathDate = -1;
-		//TODO: initialize constitution with random gender.
-		//TODO: calculate happiness
-		//TODO: calculate ideology
-		//TODO: initialize other fields
+		this.sex = sex;
+		this.sickness = 0;
+		this.needs = new byte[NEEDS_ARRAY_SIZE];
+		//TODO: ADD SOME DATA TO THE NEEDS ARRAY, 0 EVERYTHING WOULD IMPLY THE NEW CITIZEN IS ABOUT TO DIE
+		this.belief = belief;
+		this.ideology = ideology;
+		this.skills = new byte[SKILLS_ARRAY_SIZE];
+		this.posessions = new byte[POSESSIONS_ARRAY_SIZE];
 		this.country = country;
 	}
 	
@@ -198,8 +213,8 @@ public class Citizen implements ProperlyNameable, Externalizable {
 		offspring = temp;
 	}
 	
-	public String getSicknessType() {
-		return sickness < 0 ? "sickness.healthy" : Sickness.getSickness(sickness).getType();
+	public Sickness getSickness() {
+		return sickness < 0 ? null : Sickness.getSickness(sickness);
 	}
 	
 	public void setSickness(byte sickness) {
