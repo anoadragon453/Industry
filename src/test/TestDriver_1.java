@@ -46,7 +46,7 @@ public class TestDriver_1 {
 				"0.0",//version
 				(int)System.currentTimeMillis(),//seed
 				16,//tectonicPlateSize
-				5,//maxTectonicPlateInfluence, "continent size level"
+				6,//maxTectonicPlateInfluence, "continent size level"
 				1,//minTectonicPlateInfluence, "continental cohesion level"
 				16,//crustThickness
 				false, false,//cycle
@@ -118,7 +118,7 @@ public class TestDriver_1 {
 							
 						}
 						
-						if(j == 0 || j == w.tectonicPlateSize - 1 || i == 0 || i == w.tectonicPlateSize - 1) {
+						/*if(j == 0 || j == w.tectonicPlateSize - 1 || i == 0 || i == w.tectonicPlateSize - 1) {
 							
 							bi.setRGB(
 									x*w.tectonicPlateSize + i,
@@ -129,7 +129,7 @@ public class TestDriver_1 {
 									0xFF000000
 									);
 							
-						}
+						}*/
 						
 						
 					}
