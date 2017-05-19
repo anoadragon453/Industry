@@ -27,11 +27,6 @@ Forbids drugs from being sold as commodities and leaves them only to be used med
 
 
 
-Settlers
-Citizens that have been paid to settle someplace and are able to build buildings.
-
-
-
 -modos de juego
 	masacre
 	colonización
@@ -121,14 +116,6 @@ Profits will be divided between anyone working as an investor.
 
 
 
-Warnings:
-"The population is larger than what the predicted harvest can feed!"
-"¡La población es demasiado grande para lo que la cosecha proyectada puede alimentar!"
-
-"There are starving citizens!"
-
-
-
 A system that generates a two dimensional image of the city by the side, to have an image of the city for the save game file.
 
 
@@ -147,12 +134,6 @@ el precio al que se vende un producto privado depende de la variedad de empresas
 
 
 -can build water mills on water jumps (varying water level between tiles)
-
-
-
-resource properties
-type -> luxury
-boolean -> storeable? maybe not indicate whether is storeable but destroy resources that can't be stored anywhere.
 
 
 
