@@ -17,8 +17,8 @@ public class Player extends Citizen {
 	// Constructors --------------------------------
 	
 	public Player(World world, String name, String countryName, byte age, byte sex, byte belief, byte[] ideology, Country country) {
-		
 		super(name, country.getGovernment(), null, null, -age, sex, belief, ideology, country);
+		this.setHome(country.getGovernment());
 		this.setJob(GOVERNOR, country.getGovernment());
 	}
 	
