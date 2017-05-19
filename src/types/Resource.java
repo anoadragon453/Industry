@@ -113,8 +113,8 @@ public class Resource implements Nameable {
 					}
 				}
 			}
-		} catch(Throwable t) {
-			t.printStackTrace();
+		} catch(Exception e) {
+			e.printStackTrace();
 		}
 	}
 	

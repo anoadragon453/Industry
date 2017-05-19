@@ -19,23 +19,7 @@ public class Player extends Citizen {
 	public Player(World world, String name, String countryName, byte age, byte sex, byte belief, byte[] ideology, Country country) {
 		
 		super(name, country.getGovernment(), null, null, -age, sex, belief, ideology, country);
-		this.setType("governor");
-		/*
-		 * TODO:
-		 * initialize a new country
-		 * create its basic buildings
-		 * ...
-		 */
-		
-		/*
-		 * construct a citizen with
-		 * 		null, null as parents and
-		 * 		the palace as house and workplace
-		 * 		the new country as country
-		 * 		a specified ideology as ideology
-		 * 		type being whatever type stands for "chairman" or "state ruler" or whatever
-		 */
-		
+		this.setJob(GOVERNOR, country.getGovernment());
 	}
 	
 	// Methods --------------------------------

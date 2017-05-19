@@ -34,8 +34,8 @@ public class Sickness {
 					}
 				}
 			}
-		} catch(Throwable t) {
-			t.printStackTrace();
+		} catch(Exception e) {
+			e.printStackTrace();
 		}
 	}
 	

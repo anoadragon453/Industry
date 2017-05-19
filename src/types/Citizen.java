@@ -14,17 +14,32 @@ import types.Typed.Typification;
 @Typed(typification = Typification.FIELD)
 public class Citizen implements ProperlyNameable, Externalizable {
 	
-	// Static fields --------------------------------
+	// Type constants and lists --------------------------------
 	
 	static final String supertype = "citizen";
 	/**
 	 * Array of the names of all job types for looking up the name in the properties files.
 	 */
 	public static ArrayList<String> types = new ArrayList<String>();
-	static final int NEEDS_ARRAY_SIZE = 6;
-	static final int IDEOLOGY_ARRAY_SIZE = 4;
-	static final int SKILLS_ARRAY_SIZE = 5;
-	static final int POSESSIONS_ARRAY_SIZE = 0;
+	
+	public static final byte UNEMPLOYED;
+	public static final byte CHILD;
+	public static final byte ELDER;
+	public static final byte DISABLED;
+	public static final byte STUDENT;
+	public static final byte GOVERNOR;
+	public static final byte SENATOR;
+	public static final byte BUREAUCRAT;
+	public static final byte FARMER;
+	public static final byte LUMBERJACK;
+	public static final byte RANCHER;
+	public static final byte OPERATOR;
+	public static final byte ENGINEER;
+	public static final byte PROFESSOR;
+	public static final byte NURSE;
+	public static final byte PHYSICIAN;
+	
+	// Type loader --------------------------------
 	
 	static {
 		try {
@@ -36,10 +51,33 @@ public class Citizen implements ProperlyNameable, Externalizable {
 					}
 				}
 			}
-		} catch(Throwable t) {
-			t.printStackTrace();
+		} catch(Exception e) {
+			e.printStackTrace();
 		}
+		UNEMPLOYED = (byte) types.indexOf("unemployed");
+		CHILD = (byte) types.indexOf("child");
+		ELDER = (byte) types.indexOf("elder");
+		DISABLED = (byte) types.indexOf("disabled");
+		STUDENT = (byte) types.indexOf("student");
+		GOVERNOR = (byte) types.indexOf("governor");
+		SENATOR = (byte) types.indexOf("senator");
+		BUREAUCRAT = (byte) types.indexOf("bureaucrat");
+		FARMER = (byte) types.indexOf("farmer");
+		LUMBERJACK = (byte) types.indexOf("lumberjack");
+		RANCHER = (byte) types.indexOf("rancher");
+		OPERATOR = (byte) types.indexOf("operator");
+		ENGINEER = (byte) types.indexOf("engineer");
+		PROFESSOR = (byte) types.indexOf("professor");
+		NURSE = (byte) types.indexOf("nurse");
+		PHYSICIAN = (byte) types.indexOf("physician");
 	}
+	
+	// Static fields --------------------------------
+	
+	static final int NEEDS_ARRAY_SIZE = 6;
+	static final int IDEOLOGY_ARRAY_SIZE = 4;
+	static final int SKILLS_ARRAY_SIZE = 5;
+	static final int POSESSIONS_ARRAY_SIZE = 0;
 	
 	// Class fields --------------------------------
 	
@@ -62,7 +100,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	/**
 	 * Parents of this citizen. May be null.
 	 */
-	public Citizen father, mother;
+	public final Citizen father, mother;
 	/**
 	 * Children of this citizen.
 	 */
@@ -70,7 +108,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	/**
 	 * Month when this citizen was born.
 	 */
-	public int birthDate;
+	public final int birthDate;
 	/**
 	 * Month when this citizen died; -1 if it's still alive.
 	 */
@@ -199,21 +237,23 @@ public class Citizen implements ProperlyNameable, Externalizable {
 		return Citizen.supertype + "." + types.get(type);
 	}
 	
-	public void setType(byte type) {
+	protected void setType(byte type) {
 		this.type = type;
-	}
-	
-	public void setType(String type) {
-		for(int i = 0; i < types.size(); ++i) {
-			if(types.get(i).equals(type)) {
-				this.type = (byte) i;
-				break;
-			}
-		}
 	}
 	
 	public String getProperName() {
 		return name;
+	}
+	
+	public void setHome(Building home) {
+		this.home = home;
+		//TODO: if home is in a different tectonicplate, move this civilian to that tectonicplate and remove them from the citizen list.
+	}
+	
+	public void setJob(byte type, Building workplace) {
+		this.setType(type);
+		this.workplace = workplace;
+		//TODO: workplace.addWorker(type, workplace);
 	}
 	
 	public void addChild(Citizen child) {
