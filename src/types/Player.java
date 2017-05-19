@@ -40,13 +40,11 @@ public class Player extends Citizen {
 	// Methods --------------------------------
 	
 	@Override public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
-		// TODO
-		
+		super.readExternal(in);
 	}
-
+	
 	@Override public void writeExternal(ObjectOutput out) throws IOException {
-		// TODO
-		
+		super.writeExternal(out);
 	}
 	
 }
