@@ -77,7 +77,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	static final int NEEDS_ARRAY_SIZE = 6;
 	static final int IDEOLOGY_ARRAY_SIZE = 4;
 	static final int SKILLS_ARRAY_SIZE = 5;
-	static final int POSESSIONS_ARRAY_SIZE = 0;
+	static final int POSSESSIONS_ARRAY_SIZE = 0;
 	
 	// Class fields --------------------------------
 	
@@ -100,7 +100,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	/**
 	 * Parents of this citizen. May be null.
 	 */
-	public final Citizen father, mother;
+	public Citizen father, mother;
 	/**
 	 * Children of this citizen.
 	 */
@@ -108,7 +108,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	/**
 	 * Month when this citizen was born.
 	 */
-	public final int birthDate;
+	public int birthDate;
 	/**
 	 * Month when this citizen died; -1 if it's still alive.
 	 */
@@ -163,7 +163,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	/**
 	 * Shit this citizen owns.
 	 */
-	public byte[] posessions;
+	public byte[] possessions;
 	/**
 	 * Country this citizen belongs to.
 	 */
@@ -202,7 +202,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 		this.belief = belief;
 		this.ideology = ideology;
 		this.skills = new byte[SKILLS_ARRAY_SIZE];
-		this.posessions = new byte[POSESSIONS_ARRAY_SIZE];
+		this.possessions = new byte[POSSESSIONS_ARRAY_SIZE];
 		this.country = country;
 	}
 	
@@ -354,13 +354,57 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	}
 	
 	@Override public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
-		// TODO Auto-generated method stub
-		
+		this.name = (String) in.readObject();
+		this.home = null;//TODO: set home outside of this method?
+		this.workplace = null;//TODO: set workplace outside of this method?
+		this.type = in.readByte();
+		this.father = null;//TODO: set father outside of this method?
+		this.mother = null;//TODO: set mother outside of this method?
+		this.offspring = null;//TODO: set offspring outside of this method?
+		this.birthDate = in.readInt();
+		this.deathDate = in.readInt();
+		this.sex = in.readByte();
+		this.sickness = in.readByte();
+		this.needs = new byte[NEEDS_ARRAY_SIZE];
+		for(int i = 0; i < NEEDS_ARRAY_SIZE; ++i) {
+			needs[i] = in.readByte();
+		}
+		this.belief = in.readByte();
+		this.ideology = new byte[IDEOLOGY_ARRAY_SIZE];
+		for(int i = 0; i < IDEOLOGY_ARRAY_SIZE; ++i) {
+			ideology[i] = in.readByte();
+		}
+		this.skills = new byte[SKILLS_ARRAY_SIZE];
+		for(int i = 0; i < SKILLS_ARRAY_SIZE; ++i) {
+			skills[i] = in.readByte();
+		}
+		this.possessions = new byte[POSSESSIONS_ARRAY_SIZE];
+		for(int i = 0; i < POSSESSIONS_ARRAY_SIZE; ++i) {
+			possessions[i] = in.readByte();
+		}
+		this.country = null;//TODO: set country outside of this method?
 	}
 	
 	@Override public void writeExternal(ObjectOutput out) throws IOException {
-		// TODO Auto-generated method stub
-		
+		out.writeObject(name);
+		out.writeByte(type);
+		out.writeInt(birthDate);
+		out.writeInt(deathDate);
+		out.writeByte(sex);
+		out.writeByte(sickness);
+		for(int i = 0; i < NEEDS_ARRAY_SIZE; ++i) {
+			out.writeByte(needs[i]);
+		}
+		out.writeByte(belief);
+		for(int i = 0; i < IDEOLOGY_ARRAY_SIZE; ++i) {
+			out.writeByte(ideology[i]);
+		}
+		for(int i = 0; i < SKILLS_ARRAY_SIZE; ++i) {
+			out.writeByte(skills[i]);
+		}
+		for(int i = 0; i < POSSESSIONS_ARRAY_SIZE; ++i) {
+			out.writeByte(possessions[i]);
+		}
 	}
 	
 }
