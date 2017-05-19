@@ -46,7 +46,7 @@ public class TestDriver_1 {
 				"0.0",//version
 				(int)System.currentTimeMillis(),//seed
 				16,//tectonicPlateSize
-				6,//maxTectonicPlateInfluence, "continent size level"
+				5,//maxTectonicPlateInfluence, "continent size level"
 				1,//minTectonicPlateInfluence, "continental cohesion level"
 				16,//crustThickness
 				false, false,//cycle
@@ -76,7 +76,7 @@ public class TestDriver_1 {
 							int col = (0xFF << 24) |
 									  (0 << 16) |
 									  (0 << 8) |
-									  ((0xFF - (w.mid_tile_z - w.tectonicPlates[y][x].height[j][i])*8));
+									  ((0xFF - (w.mid_tile_z - w.tectonicPlates[y][x].height[j][i])*32));
 							//max: 8*16 + 127 = 255
 							//min: 0*16 + 127 = 127
 							
@@ -90,7 +90,7 @@ public class TestDriver_1 {
 							
 							int col = (0xFF << 24) |
 									  (0 << 16) |
-									  ((0xFF - (w.tectonicPlates[y][x].height[j][i] - w.mid_tile_z)*8) << 8) |
+									  ((0xFF - (w.tectonicPlates[y][x].height[j][i] - w.mid_tile_z)*32) << 8) |
 									  0;
 							//absolute max_z: max_z*4
 							//max: (16*4)*4
