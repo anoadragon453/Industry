@@ -239,7 +239,7 @@ public class Citizen implements ProperlyNameable, Externalizable {
 			 * Coinciding in more extremist opinions will yield stronger levels of agreement.
 			 * More moderate opinions will yield more neutral results.
 			 */
-			acum = acum + this.ideology[i] * player.ideology[i];
+			acum = acum + Math.abs(this.ideology[i] - player.ideology[i]);
 		}
 		return acum;
 	}
