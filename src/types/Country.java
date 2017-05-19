@@ -44,7 +44,7 @@ public class Country implements ProperlyNameable, Externalizable {
 		// TODO
 		
 	}
-
+	
 	@Override public void writeExternal(ObjectOutput out) throws IOException {
 		// TODO
 		
