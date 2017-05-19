@@ -8,13 +8,15 @@ import types.Building;
 import types.Citizen;
 import types.Country;
 import types.Typed;
+import types.Typed.Typification;
 import types.World;
 
+@Typed(typification = Typification.FIELD)
 public class Ministry extends Building {
 	
 	// Static fields --------------------------------
 	
-	@Typed.Type public static final String type = "ministry";
+	@Typed.Type public static final String supertype = "ministry";
 
 	static final int size_x = 1;//TODO: PUT ACTUAL SIZE IN HERE
 	
@@ -22,18 +24,21 @@ public class Ministry extends Building {
 	
 	// Class fields --------------------------------
 	
+	public String type;
+	
 	Citizen[] citizens;
 	
 	// Constructor --------------------------------
 	
 	public Ministry(int coordinate_tile_x, int coordinate_tile_y, byte orientation, Country country) {
 		super(coordinate_tile_x, coordinate_tile_y, orientation, country);
+		type = "";
 	}
 	
 	// Methods --------------------------------
 	
 	@Override public String getType() {
-		return super.getType() + "." + Ministry.type;
+		return super.getType() + "." + Ministry.supertype + this.type;
 	}
 	
 	@Override public int getSize_x() {
@@ -42,6 +47,10 @@ public class Ministry extends Building {
 	
 	@Override public int getSize_y() {
 		return size_y;
+	}
+	
+	public void setType(String type) {
+		this.type = type;
 	}
 	
 	@Override public Citizen[] getCitizens() {

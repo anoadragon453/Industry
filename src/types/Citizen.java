@@ -22,23 +22,37 @@ public class Citizen implements ProperlyNameable, Externalizable {
 	 */
 	public static ArrayList<String> types = new ArrayList<String>();
 	
+	public static final byte GOVERNOR;
+	public static final byte SENATOR;
+	public static final byte MINISTER;
+	public static final byte JUDGE;
+	public static final byte BUREAUCRAT;
+	public static final byte GENERAL;
+	public static final byte LIEUTENANT;
+	public static final byte SOLDIER;
+	public static final byte POLICE;
+	public static final byte LABORER;
+	public static final byte DRIVER;
+	public static final byte FARMER;
+	public static final byte LUMBERJACK;
+	public static final byte RANCHER;
+	public static final byte MINER;
+	public static final byte OPERATOR;
+	public static final byte ENGINEER;
+	public static final byte HOMEMAKER;
+	public static final byte PROFESSOR;
+	public static final byte STUDENT;
+	public static final byte ANALYST;
+	public static final byte NURSE;
+	public static final byte PHYSICIAN;
+	public static final byte ATTENDANT;
+	public static final byte WRITER;
+	public static final byte MERCHANT;
+	public static final byte BANKER;
 	public static final byte UNEMPLOYED;
 	public static final byte CHILD;
 	public static final byte ELDER;
 	public static final byte DISABLED;
-	public static final byte HOMEMAKER;
-	public static final byte STUDENT;
-	public static final byte GOVERNOR;
-	public static final byte SENATOR;
-	public static final byte BUREAUCRAT;
-	public static final byte FARMER;
-	public static final byte LUMBERJACK;
-	public static final byte RANCHER;
-	public static final byte OPERATOR;
-	public static final byte ENGINEER;
-	public static final byte PROFESSOR;
-	public static final byte NURSE;
-	public static final byte PHYSICIAN;
 	
 	// Type loader --------------------------------
 	
@@ -55,23 +69,37 @@ public class Citizen implements ProperlyNameable, Externalizable {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+		GOVERNOR = (byte) types.indexOf("governor");
+		SENATOR = (byte) types.indexOf("senator");
+		MINISTER = (byte) types.indexOf("minister");
+		JUDGE = (byte) types.indexOf("judge");
+		BUREAUCRAT = (byte) types.indexOf("bureaucrat");
+		GENERAL = (byte) types.indexOf("general");
+		LIEUTENANT = (byte) types.indexOf("lieutenant");
+		SOLDIER = (byte) types.indexOf("soldier");
+		POLICE = (byte) types.indexOf("police");
+		LABORER = (byte) types.indexOf("laborer");
+		DRIVER = (byte) types.indexOf("driver");
+		FARMER = (byte) types.indexOf("farmer");
+		LUMBERJACK = (byte) types.indexOf("lumberjack");
+		RANCHER = (byte) types.indexOf("rancher");
+		MINER = (byte) types.indexOf("miner");
+		OPERATOR = (byte) types.indexOf("operator");
+		ENGINEER = (byte) types.indexOf("engineer");
+		HOMEMAKER = (byte) types.indexOf("homemaker");
+		PROFESSOR = (byte) types.indexOf("professor");
+		STUDENT = (byte) types.indexOf("student");
+		ANALYST = (byte) types.indexOf("analyst");
+		NURSE = (byte) types.indexOf("nurse");
+		PHYSICIAN = (byte) types.indexOf("physician");
+		ATTENDANT = (byte) types.indexOf("attendant");
+		WRITER = (byte) types.indexOf("writer");
+		MERCHANT = (byte) types.indexOf("merchant");
+		BANKER = (byte) types.indexOf("banker");
 		UNEMPLOYED = (byte) types.indexOf("unemployed");
 		CHILD = (byte) types.indexOf("child");
 		ELDER = (byte) types.indexOf("elder");
 		DISABLED = (byte) types.indexOf("disabled");
-		HOMEMAKER = (byte) types.indexOf("homemaker");
-		STUDENT = (byte) types.indexOf("student");
-		GOVERNOR = (byte) types.indexOf("governor");
-		SENATOR = (byte) types.indexOf("senator");
-		BUREAUCRAT = (byte) types.indexOf("bureaucrat");
-		FARMER = (byte) types.indexOf("farmer");
-		LUMBERJACK = (byte) types.indexOf("lumberjack");
-		RANCHER = (byte) types.indexOf("rancher");
-		OPERATOR = (byte) types.indexOf("operator");
-		ENGINEER = (byte) types.indexOf("engineer");
-		PROFESSOR = (byte) types.indexOf("professor");
-		NURSE = (byte) types.indexOf("nurse");
-		PHYSICIAN = (byte) types.indexOf("physician");
 	}
 	
 	// Static fields --------------------------------
