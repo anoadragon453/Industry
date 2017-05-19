@@ -175,14 +175,12 @@ public class TectonicPlate implements ProperlyNameable, Externalizable {
 		elementsIn[subindex_tile_y][subindex_tile_x] = (short) (Short.MIN_VALUE + elementsForeignList.length - 1);
 	}
 
-	@Override
-	public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+	@Override public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
-	public void writeExternal(ObjectOutput out) throws IOException {
+	@Override public void writeExternal(ObjectOutput out) throws IOException {
 		// TODO Auto-generated method stub
 		
 	}
