@@ -135,7 +135,7 @@ public class TectonicPlate implements ProperlyNameable, Externalizable {
 	 * @param extraction Amount of mineral attempted to be extracted.
 	 * @return Amount successfully extracted.
 	 */
-	public int extractMineral(int subindex_tile_x, int subindex_tile_y, int extraction) {
+	/*public int extractMineral(int subindex_tile_x, int subindex_tile_y, int extraction) {
 		amountsList[amountsIn[subindex_tile_y][subindex_tile_x]].amount -= extraction;
 		if(amountsList[amountsIn[subindex_tile_y][subindex_tile_x]].amount < 0){
 			int actualExtraction = amountsList[amountsIn[subindex_tile_y][subindex_tile_x]].amount + extraction;
@@ -145,7 +145,7 @@ public class TectonicPlate implements ProperlyNameable, Externalizable {
 		}else{
 			return extraction;
 		}
-	}
+	}*/
 	
 	public boolean contains(Element element) {
 		boolean contained = false;
