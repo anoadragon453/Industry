@@ -1171,17 +1171,17 @@ public class World implements Externalizable {
 	 */
 	public String getInclination(int slope_x, int slope_y) {
 		int sum = getSlope(slope_x, slope_y);
-		if(sum <=   0){return " 0º";}if(sum ==   1){return " 7º";}if(sum ==   2){return "14º";}if(sum ==   3){return "21º";}
-		if(sum ==   4){return "27º";}if(sum ==   5){return "32º";}if(sum ==   6){return "37º";}if(sum ==   7){return "41º";}
-		if(sum ==   8){return "45º";}if(sum ==   9){return "48º";}if(sum ==  10){return "51º";}if(sum ==  11){return "54º";}
-		if(sum ==  12){return "56º";}if(sum ==  13){return "58º";}if(sum ==  14){return "60º";}if(sum ==  15){return "62º";}
-		if(sum ==  16){return "64º";}if(sum ==  17){return "65º";}if(sum ==  18){return "66º";}if(sum ==  19){return "67º";}
-		if(sum ==  20){return "68º";}if(sum ==  21){return "69º";}if(sum ==  22){return "70º";}if(sum ==  23){return "71º";}
-		if(sum <=  25){return "72º";}if(sum <=  27){return "73º";}if(sum <=  29){return "74º";}if(sum <=  31){return "75º";}
-		if(sum <=  33){return "76º";}if(sum <=  36){return "77º";}if(sum <=  39){return "78º";}if(sum <=  43){return "79º";}
-		if(sum <=  47){return "80º";}if(sum <=  53){return "81º";}if(sum <=  60){return "82º";}if(sum <=  70){return "83º";}
-		if(sum <=  83){return "84º";}if(sum <= 101){return "85º";}if(sum <= 130){return "86º";}if(sum <= 183){return "87º";}
-		if(sum <= 305){return "88º";}if(sum <= 916){return "89º";}               return "90º";
+		if(sum <=   0){return " 0\u00B0";}if(sum ==   1){return " 7\u00B0";}if(sum ==   2){return "14\u00B0";}if(sum ==   3){return "21\u00B0";}
+		if(sum ==   4){return "27\u00B0";}if(sum ==   5){return "32\u00B0";}if(sum ==   6){return "37\u00B0";}if(sum ==   7){return "41\u00B0";}
+		if(sum ==   8){return "45\u00B0";}if(sum ==   9){return "48\u00B0";}if(sum ==  10){return "51\u00B0";}if(sum ==  11){return "54\u00B0";}
+		if(sum ==  12){return "56\u00B0";}if(sum ==  13){return "58\u00B0";}if(sum ==  14){return "60\u00B0";}if(sum ==  15){return "62\u00B0";}
+		if(sum ==  16){return "64\u00B0";}if(sum ==  17){return "65\u00B0";}if(sum ==  18){return "66\u00B0";}if(sum ==  19){return "67\u00B0";}
+		if(sum ==  20){return "68\u00B0";}if(sum ==  21){return "69\u00B0";}if(sum ==  22){return "70\u00B0";}if(sum ==  23){return "71\u00B0";}
+		if(sum <=  25){return "72\u00B0";}if(sum <=  27){return "73\u00B0";}if(sum <=  29){return "74\u00B0";}if(sum <=  31){return "75\u00B0";}
+		if(sum <=  33){return "76\u00B0";}if(sum <=  36){return "77\u00B0";}if(sum <=  39){return "78\u00B0";}if(sum <=  43){return "79\u00B0";}
+		if(sum <=  47){return "80\u00B0";}if(sum <=  53){return "81\u00B0";}if(sum <=  60){return "82\u00B0";}if(sum <=  70){return "83\u00B0";}
+		if(sum <=  83){return "84\u00B0";}if(sum <= 101){return "85\u00B0";}if(sum <= 130){return "86\u00B0";}if(sum <= 183){return "87\u00B0";}
+		if(sum <= 305){return "88\u00B0";}if(sum <= 916){return "89\u00B0";}               return "90\u00B0";
 	}
 	
 	public String getInclinationFromCoordinate(int coordinate_tile_x, int coordinate_tile_y) {
