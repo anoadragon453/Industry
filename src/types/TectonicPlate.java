@@ -127,6 +127,7 @@ public class TectonicPlate implements ProperlyNameable, Externalizable {
 		this.amountsList = update;
 	}
 	
+	//TODO: SHOULD PROBABLY UPDATE THIS METHOD, IT INTERTANGLES TECTONICPLATE AND AMOUNT TOO CLOSELY
 	/**
 	 * Attempts to extract a certain amount of units of the mineral underneath a specific tile. Returns the actually extracted amount.
 	 * 
@@ -136,11 +137,11 @@ public class TectonicPlate implements ProperlyNameable, Externalizable {
 	 * @return Amount successfully extracted.
 	 */
 	public int extractMineral(int subindex_tile_x, int subindex_tile_y, int extraction) {
-		amountsList[amountsIn[subindex_tile_y][subindex_tile_x]].amount -= extraction;
-		if(amountsList[amountsIn[subindex_tile_y][subindex_tile_x]].amount < 0){
-			int actualExtraction = amountsList[amountsIn[subindex_tile_y][subindex_tile_x]].amount + extraction;
+		amountsList[amountsIn[subindex_tile_y][subindex_tile_x]].quantity -= extraction;
+		if(amountsList[amountsIn[subindex_tile_y][subindex_tile_x]].quantity < 0){
+			int actualExtraction = amountsList[amountsIn[subindex_tile_y][subindex_tile_x]].quantity + extraction;
 			//We could dereference it, but we leave it like this just in case.
-			amountsList[amountsIn[subindex_tile_y][subindex_tile_x]].amount = 0;
+			amountsList[amountsIn[subindex_tile_y][subindex_tile_x]].quantity = 0;
 			return actualExtraction;
 		}else{
 			return extraction;

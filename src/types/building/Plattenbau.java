@@ -52,7 +52,7 @@ public class Plattenbau extends Building {
 	}
 
 	@Override public void heal(int health) {
-		// TODO
+		// TODO plattenbaus increase the health of nearby buildings?
 	}
 	
 	@Override public void readExternal(ObjectInput arg0) throws IOException, ClassNotFoundException {

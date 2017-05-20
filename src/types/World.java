@@ -507,7 +507,7 @@ public class World implements Externalizable {
 	 * & 0x20: plate not owned by player
 	 * @return a byte of flags indicating problems encountered in terrain
 	 */
-	public byte checkTerrain(int coordinate_tile_x_from, int coordinate_tile_x_to, int coordinate_tile_y_from, int coordinate_tile_y_to, int minHeight, int maxSlope, Player owner){
+	public byte checkTerrain(int coordinate_tile_x_from, int coordinate_tile_x_to, int coordinate_tile_y_from, int coordinate_tile_y_to, int minHeight, int maxSlope, Country country){
 		byte status = 0;
 		int totalSlope = 0;
 		int bit_x = coordinate_tile_x_from < coordinate_tile_x_to ? 1 : -1;
@@ -532,7 +532,7 @@ public class World implements Externalizable {
 					if(plate.elementsIn[subindex_tile_y][subindex_tile_x] != -1) {
 						status |= 0x10;
 					}
-					if(plate.owner != owner) {
+					if(plate.country != country) {
 						status |= 0x20;
 					}
 				}
@@ -558,7 +558,7 @@ public class World implements Externalizable {
 				building.coordinate_tile_x,
 				building.getMinHeight(),
 				building.getMaxSlope(),
-				building.owner
+				building.country
 				);
 		if(checkTerrain == 0) {
 			TectonicPlate mainPlate = getTectonicPlate(getPlateXCoordinateFromTileIndex(getTileXIndexFromTileCoordinate(building.coordinate_tile_x)), getPlateYCoordinateFromTileIndex(getTileYIndexFromTileCoordinate(building.coordinate_tile_y)));
